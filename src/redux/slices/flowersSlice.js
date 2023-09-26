@@ -2,7 +2,9 @@ import { createSlice} from "@reduxjs/toolkit";
 
 
 const initialState = {
+    products_in_basket: [],
     burger_menu: false,
+    basket_open: false,
 };
 
 const flowerSlice = createSlice({
@@ -11,6 +13,9 @@ const flowerSlice = createSlice({
     reducers: {
         open_menu: (state) => {
             state.burger_menu = !state.burger_menu
+        },
+        open_basket: (state) => {
+            state.basket_open = !state.basket_open
         }
     },
     extraReducers:{}

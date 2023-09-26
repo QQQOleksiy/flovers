@@ -1,18 +1,3 @@
-.burger_menu_container_close{
-    position: absolute;
-    width: 467px;
-    height: 546px;
-    flex-shrink: 0;
-    border-radius: 36px;
-    background: rgba(255, 233, 246, 0.55);
-    backdrop-filter: blur(50px);
-    top: 27px;
-    left: -546px;
-    transition: 0.8s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 .burger_menu_container_open{
     position: absolute;
     width: 467px;
@@ -28,6 +13,21 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.burger_menu_container_close{
+    position: absolute;
+    width: 467px;
+    height: 546px;
+    flex-shrink: 0;
+    border-radius: 36px;
+    background: rgba(255, 233, 246, 0.55);
+    backdrop-filter: blur(50px);
+    top: 27px;
+    left: -546px;
+    transition: 0.8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .navigator{
     width: 100%;
@@ -35,6 +35,8 @@
     flex-shrink: 0;
     border-radius: 36px;
     background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(100px);
+
 }
 
 .product_text{

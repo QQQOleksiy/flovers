@@ -10,7 +10,7 @@
     align-items: center;
     flex-shrink: 0;
     /*background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));*/
-    backdrop-filter: blur(50px);
+    /*backdrop-filter: blur(50px);*/
     z-index: 3;
     top: -15px;
 }
@@ -118,8 +118,12 @@
     flex-shrink: 0;
     border-radius: 50%;
     background: #FFF;
-    z-index: 1;
+    z-index: 2;
     cursor: pointer;
+}
+
+.test{
+    /*backdrop-filter: blur(50px);*/
 }
 
 @media (max-width: 1500px) {
@@ -136,6 +140,7 @@
     }
 
     .second_bg {
+        top: 15px;
         height: 40px;
     }
 

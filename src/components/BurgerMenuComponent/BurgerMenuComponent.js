@@ -8,7 +8,7 @@ const BurgerMenuComponent = () => {
     const {burger_menu} = useSelector(state => state.flowerReducer);
 
     return (
-        <div className={burger_menu ? css.burger_menu_container_open :css.burger_menu_container_close}>
+        <div className={burger_menu ? css.burger_menu_container_open : css.burger_menu_container_close}>
             <div className={css.navigator}>
                 <div className={css.product_text}>
                     <div>Товары</div>
