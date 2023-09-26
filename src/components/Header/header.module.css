@@ -10,7 +10,7 @@
     align-items: center;
     flex-shrink: 0;
     /*background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));*/
-    backdrop-filter: blur(50px);
+    /* backdrop-filter: blur(50px); */
     z-index: 3;
     top: -15px;
 }
@@ -23,7 +23,7 @@
     display: flex;
     justify-content: center;
     fill: #FCFCFC;
-    opacity: 0.2;
+    /* opacity: 0.2; */
 }
 
 .first_bg {
@@ -32,19 +32,19 @@
     height: 71px;
     flex-shrink: 0;
     border-radius: 40px;
-    background: #FCFCFC;
+    background: rgb(255, 255, 255, 0.2);
     backdrop-filter: blur(100px);
 }
 
 .second_bg {
     position: absolute;
     width: 349px;
-    height: 71px;
+    height: 30px;
     flex-shrink: 0;
-    border-radius: 35.5px;
-    background: #FCFCFC;
+    border-radius: 0 0 35.5px 35.5px;
     /*background: #000;*/
-    top: 25px;
+    top: 71px;
+    background: rgb(255, 255, 255, 0.2);
     backdrop-filter: blur(100px);
 }
 
