@@ -25,4 +25,6 @@
 
 .catalog_product_open_panel {
     margin-bottom: 95px;
+    transition: 1s ease-out;
+    overflow: hidden;
 }
