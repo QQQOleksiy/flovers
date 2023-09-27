@@ -1,0 +1,17 @@
+.similar_container {
+    margin-top: 132px;
+}
+
+.similar_text {
+    margin-bottom: 39px;
+    color: #1F1F1F;
+    font-size: 48px;
+    font-weight: 510;
+    letter-spacing: 1.92px;
+    word-wrap: break-word
+}
+
+.similar_items_wrap {
+    display: flex;
+    gap: 17px;
+}
