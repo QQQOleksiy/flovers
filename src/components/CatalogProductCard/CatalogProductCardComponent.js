@@ -14,7 +14,7 @@ const CatalogProductCard = () => {
                 <hr className={css.catalog_product_hr}/>
                 <h4 className={css.catalog_product_big_text}>Бумага</h4>
             </div>
-            <div className={css.catalog_product_open_panel} style={open ? {maxHeight: 9999} : {maxHeight: 0}}>
+            <div className={css.catalog_product_open_panel} style={{maxHeight: open ? 999 : 0 }}>
                 <ScrollButtons/>
                 <div className={css.catalog_product_container}>
                     <ProductPreview/>
