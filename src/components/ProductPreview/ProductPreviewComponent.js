@@ -16,7 +16,10 @@ const ProductPreview = () => {
            <div className={css.product_container_small_images}>
                 <img src={img2} className={css.product_small_image} alt=''/>
                 <img src={img3} className={css.product_small_image} alt=''/>
-                <img src={img4} className={css.product_small_image} alt=''/>
+                <div className={css.product_small_image} style={{position: 'relative'}}>		
+                    <span>+69 цветов</span>
+                    <img src={img4} className={css.product_small_image} alt=''/>
+                </div>
            </div>
            <h4 className={css.product_pre_text}>Обёрточная Бумага ALS</h4>
         </div>

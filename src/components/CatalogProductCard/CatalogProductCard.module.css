@@ -1,0 +1,30 @@
+.catalog_product_hr {
+    height: 1px;
+    background-color: #929292;
+    margin: 0;
+    border-color: rgb(0, 0, 0, 0);
+}
+
+.catalog_product_big_text {
+    color: #1F1F1F;
+    font-size: 64px;
+    font-weight: 510;
+    letter-spacing: 2.56px;
+    word-wrap: break-word;
+    margin-top: 35px;
+    margin-bottom: 14px;
+    cursor: pointer;
+}
+
+.catalog_product_container {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 33px;
+}
+
+.catalog_product_open_panel {
+    margin-bottom: 95px;
+    transition: 1s ease-out;
+    overflow: hidden;
+}
