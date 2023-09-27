@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductPreview, ScrollButtons } from './../../components/index'
+import { ProductPreview, ScrollButtons, Pagination } from './../../components/index'
 
 import css from './all_category_products_page.module.css'
 
@@ -23,7 +23,7 @@ const CatalogPage = () => {
                 <ProductPreview/>
                 <ProductPreview/>
             </div>
-            <div>Pagination TODO</div>
+            <Pagination/>
         </div>
     );
 };
