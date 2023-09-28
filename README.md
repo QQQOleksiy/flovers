@@ -1,3 +1,9 @@
+# todo (micro)
+- [ ] блюр хереда
+- [ ] кнопочки шо скроляться (компонент)
+- [ ] поправити фон
+- [ ] подивитися до шрифта (він трохи жирніший ніж в макеті)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
