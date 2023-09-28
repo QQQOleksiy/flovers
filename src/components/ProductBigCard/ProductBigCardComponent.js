@@ -2,6 +2,8 @@ import React from 'react';
 
 import css from './ProductBigCard.module.css'
 
+import { ColorSelect } from '../../components/index';
+
 // Тествові картинки
 import img1 from './img1.jfif'
 import img2 from './img2.jfif'
@@ -23,7 +25,12 @@ const ProductBigCard = () => {
         <div>
             <span className={css.product_card_small_text}>Категории: “Осень 2023”, “Обёрточная бумага”</span>
             <h1 className={css.product_card_big_text}>Обёрточная Бумага ALS</h1>
-            TODO
+            <div className={css.product_color_select_container}>
+                <ColorSelect/>
+            </div>
+            <div className={css.product_card_info}>
+                TODO
+            </div>
         </div>
         </div>
     );
