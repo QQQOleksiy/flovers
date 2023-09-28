@@ -28,8 +28,22 @@ const ProductBigCard = () => {
             <div className={css.product_color_select_container}>
                 <ColorSelect/>
             </div>
+            <div className={css.product_description}>
+                <span className={css.product_description_bold}>Размер:</span>
+                <span>28x28x28 см</span>
+                <span className={css.product_description_bold}>Размер:</span>
+                <span>28x28x28 см</span>
+                <span className={css.product_description_bold}>Размер:</span>
+                <span>28x28x28 см</span>
+                <span className={css.product_description_bold}>Размер:</span>
+                <span>28x28x28 см</span>
+                <span className={css.product_description_bold}>Размер:</span>
+                <span>28x28x28 см</span>
+                <span className={css.product_description_bold}>Минимальный заказ: </span>
+                <span>1 коробка</span>
+            </div>
             <div className={css.product_card_info}>
-                TODO
+                <div className={css.product_cart_btn}>Добавить в корзину</div>
             </div>
         </div>
         </div>
