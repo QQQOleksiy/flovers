@@ -22,30 +22,30 @@ const ProductBigCard = () => {
                     <img src={img4} className={css.product_card_small_image} alt=""/>
                 </div>
             </div>
-        <div>
-            <span className={css.product_card_small_text}>Категории: “Осень 2023”, “Обёрточная бумага”</span>
-            <h1 className={css.product_card_big_text}>Обёрточная Бумага ALS</h1>
-            <div className={css.product_color_select_container}>
-                <ColorSelect/>
+            <div className={css.product_card_text_template}>
+                <span className={css.product_card_small_text}>Категории: “Осень 2023”, “Обёрточная бумага”</span>
+                <h1 className={css.product_card_big_text}>Обёрточная Бумага ALS</h1>
+                <div className={css.product_color_select_container}>
+                    <ColorSelect/>
+                </div>
+                <div className={css.product_description}>
+                    <span className={css.product_description_bold}>Размер:</span>
+                    <span>28x28x28 см</span>
+                    <span className={css.product_description_bold}>Размер:</span>
+                    <span>28x28x28 см</span>
+                    <span className={css.product_description_bold}>Размер:</span>
+                    <span>28x28x28 см</span>
+                    <span className={css.product_description_bold}>Размер:</span>
+                    <span>28x28x28 см</span>
+                    <span className={css.product_description_bold}>Размер:</span>
+                    <span>28x28x28 см</span>
+                    <span className={css.product_description_bold}>Минимальный заказ: </span>
+                    <span>1 коробка</span>
+                </div>
+                <div className={css.product_card_info}>
+                    <div className={css.product_cart_btn}>Добавить в корзину</div>
+                </div>
             </div>
-            <div className={css.product_description}>
-                <span className={css.product_description_bold}>Размер:</span>
-                <span>28x28x28 см</span>
-                <span className={css.product_description_bold}>Размер:</span>
-                <span>28x28x28 см</span>
-                <span className={css.product_description_bold}>Размер:</span>
-                <span>28x28x28 см</span>
-                <span className={css.product_description_bold}>Размер:</span>
-                <span>28x28x28 см</span>
-                <span className={css.product_description_bold}>Размер:</span>
-                <span>28x28x28 см</span>
-                <span className={css.product_description_bold}>Минимальный заказ: </span>
-                <span>1 коробка</span>
-            </div>
-            <div className={css.product_card_info}>
-                <div className={css.product_cart_btn}>Добавить в корзину</div>
-            </div>
-        </div>
         </div>
     );
 };
