@@ -1,9 +1,14 @@
 .scroll_btns_main {
     display: flex;
-    /* overflow: scroll; */
-    overflow: hidden;
     justify-content: space-between;
     max-height: 54.8px;
+}
+
+.scroll_btn_scroll {
+    display: flex;
+    /* overflow: scroll; */
+    overflow: hidden;
+    width: max-content;
 }
 
 .scroll_btns_flex {
@@ -27,4 +32,10 @@
     text-transform: capitalize;
     word-wrap: break-word;
     cursor: pointer;
+}
+
+.scroll_arrow {
+    height: 100%;
+    align-items: center;
+    margin-left: 15px
 }
