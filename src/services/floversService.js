@@ -2,9 +2,9 @@ import {apiService} from "./axiosService";
 import {urls} from "../config";
 
 const floversService = {
-    getAll: () => apiService.get(urls.getAllPositions()),
+    getAll: (page, type) => apiService.get(urls.getAllPositions(page, type)),
     getById: (id) => apiService.get(urls.positionById(id)),
-    getByName: (name) => apiService.get(urls.positionByName())
+    getCategory: () => apiService.get(urls.previousCatalog())
 }
 
 export {floversService}
