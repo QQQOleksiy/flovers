@@ -20,7 +20,7 @@ const ProductPreview = ({product}) => {
                 <img src={img2} className={css.product_small_image} alt=''/>
                 <img src={img3} className={css.product_small_image} alt=''/>
                 <div className={css.product_small_image} style={{position: 'relative'}}>
-                    <span>+{colors.length} цветов</span>
+                    <span>+{} цветов</span>
                     <img src={img4} className={css.product_small_image} alt=''/>
                 </div>
            </div>

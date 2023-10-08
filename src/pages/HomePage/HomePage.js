@@ -1,12 +1,13 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 
 import css from './home_page_style.module.css'
-
 import { ProductPreview, ProductBtnMore } from '../../components/index'
-
 import women from './women_.png'
 
 const HomePage = () => {
+
+    let navigate = useNavigate();
 
     return (
         <div>
@@ -20,7 +21,7 @@ const HomePage = () => {
                     <div className={css.lower_title_text}>Просто и красиво.</div>
                 </div>
                 <div className={css.two_buttons}>
-                    <div className={css.button_catalog}>
+                    <div className={css.button_catalog} onClick={() => navigate('/catalog')}>
                         <div>Перейти в Каталог</div>
                     </div>
                     <div className={css.button_price_list}>

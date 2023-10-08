@@ -8,7 +8,7 @@ import { ScrollButtons, ProductPreview, ProductBtnMore } from './../index'
 const CatalogProductCard = ({category}) => {
     const [open, setOpen] = useState(false);
 
-    const {name, data} = category
+    const {name, data, type} = category // eslint-disable-next-line
 
     return (
         <>
@@ -23,7 +23,7 @@ const CatalogProductCard = ({category}) => {
                         data.map(value => <ProductPreview product={value} key={value.id}/>)
                     }
                 </div>
-                <ProductBtnMore/>
+                <ProductBtnMore type={type}/>
             </div>
         </>
     );

@@ -6,10 +6,24 @@ const initialState = {
     one_product: {},
     similarItem: [],
     category: [],
+    all_with_paginate: [],
     products_in_basket: [],
     burger_menu: false,
     basket_open: false,
 };
+
+const getAll = createAsyncThunk(
+    'flowersSlice/getAll',
+    async ([page, type], thunkAPI) => {
+        try {
+            const {data} = await floversService.getAll(page, type)
+            return data.data
+
+        }catch (e) {
+            return thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
 
 const getCategory = createAsyncThunk(
     'flowersSlice/getCategory',
@@ -71,6 +85,9 @@ const flowerSlice = createSlice({
             .addCase(getSimilar.fulfilled, (state, action) => {
                 state.similarItem = action.payload
             })
+            .addCase(getAll.fulfilled, (state, action) => {
+                state.all_with_paginate = action.payload
+            })
 })
 
 
@@ -80,7 +97,8 @@ const flowerAction = {
     ...actions,
     getCategory,
     getById,
-    getSimilar
+    getSimilar,
+    getAll
 }
 
 export {
