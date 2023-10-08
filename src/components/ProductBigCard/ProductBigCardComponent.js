@@ -63,6 +63,7 @@ const ProductBigCard = () => {
                     <span className={css.product_description_bold}>Минимальный заказ: </span>
                     <span>1 коробка</span>
                 </div>
+                <div className={css.product_price}><span>Цена:</span> 123456 р</div>
                 <div className={css.product_card_info}>
                     <div className={css.product_cart_btn}>Добавить в корзину</div>
                 </div>

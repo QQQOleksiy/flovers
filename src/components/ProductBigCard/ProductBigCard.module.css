@@ -78,6 +78,21 @@
     word-wrap: break-word
 }
 
+.product_price {
+    margin-top: 24px;
+    color: #31BE00;
+    font-size: 24px;
+    font-weight: 510;
+    word-wrap: break-word
+}
+
+.product_price > span {
+    color: #1F1F1F;
+    font-size: 24px;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
 .product_cart_btn {
     max-width: max-content;
     border-radius: 50px;

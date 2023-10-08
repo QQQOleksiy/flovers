@@ -2,9 +2,12 @@ import React from 'react';
 
 import css from './home_page_style.module.css'
 
+import { ProductPreview, ProductBtnMore } from '../../components/index'
+
 import women from './women_.png'
 
 const HomePage = () => {
+
     return (
         <div>
             <div className={css.up_bg}>
@@ -64,12 +67,24 @@ const HomePage = () => {
                     </defs>
                 </svg>
             </div>
-            <div className={css.space}>
-                <div></div>
-                <div></div>
-                <div></div>
+            <div className={css.home_content_container}>
+                <h3 className={css.popular_text}>Популярное</h3>
+                <div className={css.popular_product_container}>
+                    <ProductPreview  product={{colors: 10, name: 'Обёрточная Бумага HBFWZB'}} key={1}/>
+                    <ProductPreview  product={{colors: 10, name: 'Обёрточная Бумага HBFWZB'}} key={1}/>
+                    <ProductPreview  product={{colors: 10, name: 'Обёрточная Бумага HBFWZB'}} key={1}/>
+                </div>
+                {/* Текст пропсами передаси */}
+                <ProductBtnMore/>
+                <div className={css.another_links}>
+                    <hr className={css.home_product_hr}/>
+                    <h4 className={css.home_product_big_text}>Доставка и Оплата</h4>
+                    <hr className={css.home_product_hr}/>
+                    <h4 className={css.home_product_big_text}>Возврат и Обмен</h4>
+                    <hr className={css.home_product_hr}/>
+                    <h4 className={css.home_product_big_text}>Пользовательское Соглашение</h4>
+                </div>
             </div>
-            <div className={css.retreat}></div>
         </div>
     );
 };
