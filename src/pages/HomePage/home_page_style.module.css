@@ -135,6 +135,7 @@
     overflow: hidden;
 }
 
+/* not used */
 .space{
     position: absolute;
     background: silver;
@@ -157,11 +158,12 @@
     height: 2320px;
     width: 100%;
 }
+/* /not used */
 
 .home_content_container {
     position: relative;
     margin-top: -40px;
-    z-index: 99;
+    z-index: 2;
     margin-left: auto;
     margin-right: auto;
     max-width: 1386px;
