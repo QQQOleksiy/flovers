@@ -49,9 +49,9 @@
 }
 
 .contacts{
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
 }
 
@@ -71,6 +71,7 @@
     font-style: normal;
     font-weight: 590;
     line-height: normal;
+    margin-bottom: 4px;
 }
 
 .email{
@@ -90,7 +91,16 @@
     font-style: normal;
     font-weight: 510;
     line-height: normal;
-    text-decoration-line: underline;
+    margin-bottom: 4px;
+}
+
+.obrabotka_data {
+    margin-top: 32px;
+    color: black;
+    font-size: 16px;
+    font-weight: 510;
+    text-decoration: underline;
+    word-wrap: break-word
 }
 
 .text_popusk {
