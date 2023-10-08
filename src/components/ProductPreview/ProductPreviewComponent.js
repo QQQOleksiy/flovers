@@ -11,7 +11,7 @@ import img4 from './img4.jfif'
 
 const ProductPreview = ({product}) => {
 
-    const {name, main_photo_path, colors} = product
+    const {name, colors} = product
 
     return (
         <div className={css.product_pre}>
@@ -19,7 +19,7 @@ const ProductPreview = ({product}) => {
            <div className={css.product_container_small_images}>
                 <img src={img2} className={css.product_small_image} alt=''/>
                 <img src={img3} className={css.product_small_image} alt=''/>
-                <div className={css.product_small_image} style={{position: 'relative'}}>		
+                <div className={css.product_small_image} style={{position: 'relative'}}>
                     <span>+{colors.length} цветов</span>
                     <img src={img4} className={css.product_small_image} alt=''/>
                 </div>

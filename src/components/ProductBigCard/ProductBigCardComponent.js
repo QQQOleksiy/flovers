@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import css from './ProductBigCard.module.css'
 
@@ -9,9 +9,26 @@ import img1 from './img1.jfif'
 import img2 from './img2.jfif'
 import img3 from './img3.jfif'
 import img4 from './img4.jfif'
+import {useDispatch, useSelector} from "react-redux";
+import {flowerAction} from "../../redux";
+import {useParams} from "react-router-dom";
 
 
 const ProductBigCard = () => {
+
+    let {id} = useParams();
+
+    const dispatch = useDispatch();
+
+    const {one_product} = useSelector(state => state.flowerReducer)
+
+    useEffect(() => {
+        dispatch(flowerAction.getById(id))
+
+    },[dispatch, id])
+
+    console.log(one_product);
+
     return (
         <div className={css.product_card_template}>
            <div className={css.product_card_image_template}>

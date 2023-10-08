@@ -8,7 +8,7 @@ import { ScrollButtons, ProductPreview, ProductBtnMore } from './../index'
 const CatalogProductCard = ({category}) => {
     const [open, setOpen] = useState(false);
 
-    const {name, type, data} = category
+    const {name, data} = category
 
     return (
         <>
