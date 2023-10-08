@@ -4,6 +4,7 @@ import {floversService} from "../../services";
 
 const initialState = {
     one_product: {},
+    similarItem: [],
     category: [],
     products_in_basket: [],
     burger_menu: false,
@@ -35,6 +36,18 @@ const getById = createAsyncThunk(
         }
     }
 )
+const getSimilar = createAsyncThunk(
+    'flowersSlice/getSimilar',
+    async (_, thunkAPI) => {
+        try {
+            const {data} = await floversService.getById('184')
+            return data.data.same
+
+        }catch (e) {
+            return thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
 
 const flowerSlice = createSlice({
     name: 'flowerSlice',
@@ -55,6 +68,9 @@ const flowerSlice = createSlice({
             .addCase(getById.fulfilled, (state, action) => {
                 state.one_product = action.payload
             })
+            .addCase(getSimilar.fulfilled, (state, action) => {
+                state.similarItem = action.payload
+            })
 })
 
 
@@ -63,7 +79,8 @@ const {reducer: flowerReducer, actions} = flowerSlice;
 const flowerAction = {
     ...actions,
     getCategory,
-    getById
+    getById,
+    getSimilar
 }
 
 export {
