@@ -10,18 +10,8 @@ const CatalogPage = () => {
             <h4 className={css.catalog_product_big_text}>Бумага</h4>
             <ScrollButtons/>
             <div className={css.catalog_products_container}>
-                <ProductPreview/>
-                <ProductPreview/>
-                <ProductPreview/>
-                <ProductPreview/>
-                <ProductPreview/>
-                <ProductPreview/>
-                <ProductPreview/>
-                <ProductPreview/>
-                <ProductPreview/>
-                <ProductPreview/>
-                <ProductPreview/>
-                <ProductPreview/>
+                {/*<ProductPreview/>*/}
+                {/*доробити*/}
             </div>
             <Pagination/>
         </div>

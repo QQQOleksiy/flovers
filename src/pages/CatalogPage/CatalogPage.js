@@ -19,7 +19,7 @@ const CatalogPage = () => {
     return (
         <div className={css.catalog_container}>
             {
-                category.map(value => <CatalogProductCard category={value}/>)
+                category.map((value, id) => <CatalogProductCard category={value} key={id}/>)
             }
         </div>
     );

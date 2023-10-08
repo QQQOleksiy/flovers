@@ -22,7 +22,7 @@ const ProductBigCard = () => {
 
     const {one_product} = useSelector(state => state.flowerReducer)
 
-    const {name, volume, length, width, brand, orign_country, unit, weight} = one_product
+    const {name, volume, length, width, brand, orign_country, unit, weight, opt_price} = one_product
 
     useEffect(() => {
         dispatch(flowerAction.getById(id_))
@@ -61,7 +61,7 @@ const ProductBigCard = () => {
                     <span className={css.product_description_bold}>Минимальный заказ: </span>
                     <span>1 коробка</span>
                 </div>
-                <div className={css.product_price}><span>Цена:</span> 123456 р</div>
+                <div className={css.product_price}><span>Цена:</span> {opt_price} р</div>
                 <div className={css.product_card_info}>
                     <div className={css.product_cart_btn}>Добавить в корзину</div>
                 </div>
