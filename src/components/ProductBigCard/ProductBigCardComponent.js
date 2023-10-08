@@ -29,8 +29,6 @@ const ProductBigCard = () => {
 
     },[dispatch, id_])
 
-    console.log(one_product);
-
     return (
         <div className={css.product_card_template}>
            <div className={css.product_card_image_template}>
