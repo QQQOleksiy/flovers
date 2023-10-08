@@ -16,16 +16,18 @@ import {useParams} from "react-router-dom";
 
 const ProductBigCard = () => {
 
-    let {id} = useParams();
+    let {id: id_} = useParams();
 
     const dispatch = useDispatch();
 
     const {one_product} = useSelector(state => state.flowerReducer)
 
-    useEffect(() => {
-        dispatch(flowerAction.getById(id))
+    const {name, volume, length, width, brand, orign_country, unit, weight} = one_product
 
-    },[dispatch, id])
+    useEffect(() => {
+        dispatch(flowerAction.getById(id_))
+
+    },[dispatch, id_])
 
     console.log(one_product);
 
@@ -41,21 +43,23 @@ const ProductBigCard = () => {
             </div>
             <div className={css.product_card_text_template}>
                 <span className={css.product_card_small_text}>Категории: “Осень 2023”, “Обёрточная бумага”</span>
-                <h1 className={css.product_card_big_text}>Обёрточная Бумага ALS</h1>
+                <h1 className={css.product_card_big_text}>{name}</h1>
                 <div className={css.product_color_select_container}>
                     <ColorSelect/>
                 </div>
                 <div className={css.product_description}>
                     <span className={css.product_description_bold}>Размер:</span>
-                    <span>28x28x28 см</span>
-                    <span className={css.product_description_bold}>Размер:</span>
-                    <span>28x28x28 см</span>
-                    <span className={css.product_description_bold}>Размер:</span>
-                    <span>28x28x28 см</span>
-                    <span className={css.product_description_bold}>Размер:</span>
-                    <span>28x28x28 см</span>
-                    <span className={css.product_description_bold}>Размер:</span>
-                    <span>28x28x28 см</span>
+                    <span>{`${volume}x${length}x${width}`}</span>
+                    <span className={css.product_description_bold}>Бренд:</span>
+                    <span>{brand}</span>
+                    <span className={css.product_description_bold}>Страна производитель:</span>
+                    <span>{orign_country}</span>
+                    <span className={css.product_description_bold}>Упаковка:</span>
+                    <span>{unit}</span>
+                    <span className={css.product_description_bold}>Измерения:</span>
+                    <span>{`${volume}x${length}x${width}`}</span>
+                    <span className={css.product_description_bold}>Вес:</span>
+                    <span>{weight}</span>
                     <span className={css.product_description_bold}>Минимальный заказ: </span>
                     <span>1 коробка</span>
                 </div>
