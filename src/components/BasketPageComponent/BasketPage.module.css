@@ -45,7 +45,7 @@
 
 .spase_for_products {
     width: 100%;
-    height: auto;
+    min-height: 410px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

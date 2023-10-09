@@ -1,0 +1,98 @@
+.one_product_container{
+    width: calc(100%-86px);
+    height: 64px;
+    border-radius: 25px;
+    background: #FFF;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding-left: 43px;
+    padding-right: 43px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.first {
+    display: flex;
+    align-items: center;
+    grid-column: span 2 / span 2;
+    margin-right: 20px;
+}
+.first > span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #1F1F1F;
+    font-size: 20px;
+    font-weight: 510;
+    text-transform: capitalize;
+}
+
+.second {
+    display: flex;
+    align-items: center;
+    color: #1F1F1F;
+    font-size: 20px;
+    font-family: SF Pro;
+    font-weight: 510;
+    word-wrap: break-word
+}
+
+.color_item {
+    height: 36px;
+    width: 36px;
+    margin-left: 5px;
+    margin-right: 4px;
+    margin-right: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.third {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #1F1F1F;
+    font-size: 20px;
+    font-weight: 510;
+    word-wrap: break-word
+}
+
+.form_input {
+    height: 34px;
+    width: 70px;
+    text-align: end;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-bottom-style: dashed;
+    border-color: #000;
+    margin-left: 5px;
+    color: #626262;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+    word-wrap: break-word
+}
+
+
+.four {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #8A8A8A;
+    font-size: 16px;
+    font-weight: 510;
+    text-transform: lowercase;
+    word-wrap: break-word
+}
+
+.price {
+    width: 100%;
+    text-align: center;
+    color: #4DC130;
+    font-size: 20px;
+    font-weight: 510;
+    text-transform: capitalize;
+    word-wrap: break-word
+}

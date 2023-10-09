@@ -11,7 +11,7 @@ const OneProductInColorCart = () => {
             </div>
             <div className={css.second}>
                 На складе: 
-                <span className={109 != 0 ? css.on_sklad : css.no_on_sklad}>109</span>
+                <span className={109 ? css.on_sklad : css.no_on_sklad}>109</span>
             </div>
             <div className={css.third}>
                 Кол-во: 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import css from './BasketPage.module.css'
-import {OneProductInBasket} from "../OneProductInBasket/OneProductInBasket";
+import {OneProductInBigCart} from "../index";
 
 import { useState } from 'react';
 
@@ -21,13 +21,13 @@ const BasketPageComponent = () => {
                             </div>
 
                             <div className={css.spase_for_products}>
-                                <OneProductInBasket/>
-                                <OneProductInBasket/>
+                                <OneProductInBigCart/>
+                                <OneProductInBigCart/>
                             </div>
 
                             <div className={css.total}>
                                 <div className={css.total_text}>Всего</div>
-                                <div className={css.total_count}>2000</div>
+                                <div className={css.total_count}>2000₽</div>
                             </div>
                         </div>
                     </div>
