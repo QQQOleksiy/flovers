@@ -20,7 +20,7 @@ const CatalogProductCard = ({category}) => {
                 <ScrollButtons/>
                 <div className={css.catalog_product_container}>
                     {
-                        data.map(value => <ProductPreview product={value} key={value.id}/>)
+                        data.map((value, id) => <ProductPreview product={value} key={id}/>)
                     }
                 </div>
                 <ProductBtnMore type={type}/>

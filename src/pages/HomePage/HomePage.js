@@ -1,13 +1,28 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useNavigate} from "react-router-dom";
 
 import css from './home_page_style.module.css'
-import { ProductPreview, ProductBtnMore } from '../../components/index'
+import { ProductPreview} from '../../components/index'
 import women from './women_.png'
+import {useDispatch, useSelector} from "react-redux";
+import {flowerAction} from "../../redux";
 
 const HomePage = () => {
 
     let navigate = useNavigate();
+
+    const dispatch = useDispatch();
+
+    const {similarItem} = useSelector(state => state.flowerReducer)
+
+    useEffect(() => {
+        dispatch(flowerAction.getSimilar([184, 3]))
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    },[dispatch])
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    },[])
 
     return (
         <div>
@@ -71,12 +86,12 @@ const HomePage = () => {
             <div className={css.home_content_container}>
                 <h3 className={css.popular_text}>Популярное</h3>
                 <div className={css.popular_product_container}>
-                    <ProductPreview  product={{colors: 10, name: 'Обёрточная Бумага HBFWZB'}} key={1}/>
-                    <ProductPreview  product={{colors: 10, name: 'Обёрточная Бумага HBFWZB'}} key={1}/>
-                    <ProductPreview  product={{colors: 10, name: 'Обёрточная Бумага HBFWZB'}} key={1}/>
+                    {
+                        similarItem.map(value => <ProductPreview  product={value}/>)
+                    }
+
                 </div>
                 {/* Текст пропсами передаси */}
-                <ProductBtnMore/>
                 <div className={css.another_links}>
                     <hr className={css.home_product_hr}/>
                     <h4 className={css.home_product_big_text}>Доставка и Оплата</h4>

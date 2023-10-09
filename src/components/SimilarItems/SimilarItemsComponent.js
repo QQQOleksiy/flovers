@@ -5,18 +5,21 @@ import css from './SimilarItems.module.css'
 import { ScrollButtons, SimilarItemsCard } from '../../components/index';
 import {useDispatch, useSelector} from "react-redux";
 import {flowerAction} from "../../redux";
+import {useParams} from "react-router-dom";
 
 
-const SimilarItems = () => {
+const SimilarItems = ({count}) => {
+
+    let {id} = useParams();
 
     const dispatch = useDispatch();
 
     const {similarItem} = useSelector(state => state.flowerReducer)
 
     useEffect(() => {
-        dispatch(flowerAction.getSimilar())
-
-    },[dispatch])
+        dispatch(flowerAction.getSimilar([184, count]))
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    },[dispatch, id])
 
 
     return (

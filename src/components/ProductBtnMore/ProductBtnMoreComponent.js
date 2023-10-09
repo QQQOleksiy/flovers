@@ -9,8 +9,8 @@ const ProductBtnMore = ({type}) => {
     let navigate = useNavigate();
 
     return (
-        <div className={css.container_more_btn} onClick={() => navigate(`/catalog/${type}?page=1`)}>
-           <div className={css.product_more_btn}>Посмотреть Ещё</div>
+        <div className={css.container_more_btn}>
+           <div onClick={() => navigate(`/catalog/${type}?page=1`)} className={css.product_more_btn}>Посмотреть Ещё</div>
         </div>
     );
 };

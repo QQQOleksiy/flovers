@@ -6,7 +6,7 @@ const initialState = {
     one_product: {},
     similarItem: [],
     category: [],
-    all_with_paginate: [],
+    all_with_paginate: {},
     products_in_basket: [],
     burger_menu: false,
     basket_open: false,
@@ -17,7 +17,7 @@ const getAll = createAsyncThunk(
     async ([page, type], thunkAPI) => {
         try {
             const {data} = await floversService.getAll(page, type)
-            return data.data
+            return data
 
         }catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
@@ -52,9 +52,9 @@ const getById = createAsyncThunk(
 )
 const getSimilar = createAsyncThunk(
     'flowersSlice/getSimilar',
-    async (_, thunkAPI) => {
+    async ([id, same], thunkAPI) => {
         try {
-            const {data} = await floversService.getById('184')
+            const {data} = await floversService.getById(id, same)
             return data.data.same
 
         }catch (e) {

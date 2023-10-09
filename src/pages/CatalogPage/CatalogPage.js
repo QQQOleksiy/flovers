@@ -13,7 +13,7 @@ const CatalogPage = () => {
 
     useEffect(() =>{
         dispatch(flowerAction.getCategory())
-
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         }, [dispatch])
 
     return (
