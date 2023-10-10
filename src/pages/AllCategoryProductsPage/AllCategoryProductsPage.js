@@ -11,6 +11,7 @@ const CatalogPage = () => {
     const location = useLocation();
     const { product_type } = useParams();
     const pageFromUrl = parseInt(new URLSearchParams(location.search).get('page')) || 1;
+
     const [page, setPage] = useState(pageFromUrl);
 
     const dispatch = useDispatch();
@@ -23,6 +24,8 @@ const CatalogPage = () => {
 
         searchParams.set('page', page.toString());
         const newUrl = `${location.pathname}?${searchParams.toString()}`;
+
+
         window.history.replaceState(null, null, newUrl);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, [dispatch, product_type, page, location.pathname, searchParams]);
@@ -31,7 +34,7 @@ const CatalogPage = () => {
     return (
         <div className={css.catalog_container}>
             <hr className={css.catalog_product_hr}/>
-            <h4 className={css.catalog_product_big_text}>Бумага</h4>
+            <h4 className={css.catalog_product_big_text}>{product_type}</h4>
             {/*<ScrollButtons/>*/}
             <div className={css.catalog_products_container}>
                 {all_with_paginate && all_with_paginate.data ? (

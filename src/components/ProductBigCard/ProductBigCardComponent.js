@@ -26,11 +26,11 @@ const ProductBigCard = () => {
 
     const {one_product} = useSelector(state => state.flowerReducer)
 
-    const {name, volume, length, width, brand, orign_country, unit, weight, opt_price} = one_product
+    const {name, volume, length, width, brand, orign_country, unit, weight, opt_price, colors} = one_product || { colors: [] }
 
     useEffect(() => {
         dispatch(flowerAction.getById(id_))
-
+        setOpen(false)
     },[dispatch, id_])
 
     return (
@@ -47,8 +47,8 @@ const ProductBigCard = () => {
                 <div className={css.product_card_text_template}>
                     <span className={css.product_card_small_text}>Категории: “Осень 2023”, “Обёрточная бумага”</span>
                     <h1 className={css.product_card_big_text}>{name}</h1>
-                    <div className={css.product_color_select_container} onClick={() => setOpen(true)}>
-                        <ColorSelect/>
+                    <div className={css.product_color_select_container} onClick={() => setOpen(!isOpen)}>
+                        <ColorSelect colors={colors || []} />
                     </div>
                     <div className={css.product_description}>
                         <span className={css.product_description_bold}>Размер:</span>
@@ -72,7 +72,7 @@ const ProductBigCard = () => {
                     </div>
                 </div>
             </div>
-            <ColorsBigCart open={isOpen}/>
+            <ColorsBigCart open={isOpen} setOpen={setOpen} colors={colors || []}/>
         </>
     );
 };

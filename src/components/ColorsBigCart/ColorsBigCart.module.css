@@ -19,7 +19,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 2;
 }
 
 .blur_bg {
@@ -67,7 +67,7 @@
 
 .spase_for_products {
     width: 100%;
-    min-height: 420px;
+    height: 420px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

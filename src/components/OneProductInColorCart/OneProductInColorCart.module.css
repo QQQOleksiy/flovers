@@ -1,5 +1,5 @@
 .one_product_container{
-    width: calc(100%-86px);
+    width: calc(100% - 86px);
     height: 64px;
     border-radius: 25px;
     background: #FFF;

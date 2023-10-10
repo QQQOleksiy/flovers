@@ -69,6 +69,7 @@
     fill: #1F1F1F;
     z-index: 1;
     padding-top: 25px;
+    cursor: pointer;
 }
 
 .price {

@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 
 import css from './SimilarItems.module.css'
 
-import { ScrollButtons, SimilarItemsCard } from '../../components/index';
+import { SimilarItemsCard } from '../../components/index';
 import {useDispatch, useSelector} from "react-redux";
 import {flowerAction} from "../../redux";
 import {useParams} from "react-router-dom";
@@ -19,13 +19,13 @@ const SimilarItems = ({count}) => {
     useEffect(() => {
         dispatch(flowerAction.getSimilar([184, count]))
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    },[dispatch, id])
+    },[dispatch, id, count])
 
 
     return (
         <div className={css.similar_container}>
             <h4 className={css.similar_text}>Похожие Товары</h4>
-            <ScrollButtons/>
+            {/*<ScrollButtons/>*/}
             <div className={css.similar_items_wrap}>
                 {
                     similarItem.map(value => <SimilarItemsCard card={value} key={value.id}/>)
