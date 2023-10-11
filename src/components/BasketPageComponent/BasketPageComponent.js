@@ -4,9 +4,17 @@ import css from './BasketPage.module.css'
 import {OneProductInBigCart} from "../index";
 
 import { useState } from 'react';
+import {useSelector} from "react-redux";
 
 const BasketPageComponent = () => {
     const [step, setStep] = useState(0);
+
+    const {products_in_basket} = useSelector(state => state.flowerReducer)
+
+    const totalCost = products_in_basket.reduce((total, product) => {
+        const productCost = product.opt_price * product.count;
+        return total + productCost;
+    }, 0);
 
     return (
         <div>
@@ -21,17 +29,18 @@ const BasketPageComponent = () => {
                             </div>
 
                             <div className={css.spase_for_products}>
-                                <OneProductInBigCart/>
-                                <OneProductInBigCart/>
+                                {
+                                    products_in_basket.map(value => <OneProductInBigCart product={value}/>)
+                                }
                             </div>
 
                             <div className={css.total}>
                                 <div className={css.total_text}>Всего</div>
-                                <div className={css.total_count}>2000₽</div>
+                                <div className={css.total_count}>{totalCost}₽</div>
                             </div>
                         </div>
                     </div>
-                    <div className={css.basket_continue_btn} onClick={() => setStep(step+1)}>Продолжить</div>
+                    <div className={css.basket_continue_btn} onClick={() => products_in_basket.length > 0 ? setStep(step+1) : null}>Продолжить</div>
                 </>
                 )
             }

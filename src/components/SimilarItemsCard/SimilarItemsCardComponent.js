@@ -1,18 +1,18 @@
 import React from 'react';
 
 import css from './SimilarItemsCard.module.css'
-import img from './img1.jfif'
+// import image from './img1.jfif'
 import {useNavigate} from "react-router-dom";
 
 const SimilarItemsCard = ({card}) => {
 
     const navigate = useNavigate();
 
-    const {id, name} = card;
+    const {id, name, main_photo_path} = card;
 
     return (
         <div className={css.similar_item_container} onClick={() => navigate(`/item/${id}`)}>
-            <img src={img} className={css.similar_item_image} alt=""/>
+            <img src={`http://45.132.105.143/images/${main_photo_path}`} className={css.similar_item_image} alt=""/>
             <span className={css.similar_item_title_text}>{name}</span>
         </div>
     );

@@ -3,7 +3,7 @@ import css from './OneProductInColorCart.module.css';
 
 const OneProductInColorCart = ({ one_color, onUpdateCount }) => {
 
-    const { color_id, product_id, color_name, photo_path, total, opt_price } = one_color;
+    const {color_name, photo_path, total, opt_price } = one_color;
 
     const initialCount = !isNaN(one_color.count) ? parseInt(one_color.count, 10) : 0;
 

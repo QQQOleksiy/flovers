@@ -72,6 +72,13 @@ const flowerSlice = createSlice({
         },
         open_basket: (state) => {
             state.basket_open = !state.basket_open
+        },
+        add_product_in_basket: (state, action) => {
+            state.products_in_basket = [...state.products_in_basket, ...action.payload];
+        },
+        delete_product_by_ids: (state, action) => {
+            const { color_id, product_id } = action.payload;
+            state.products_in_basket = state.products_in_basket.filter(product => !(product.color_id === color_id && product.product_id === product_id));
         }
     },
     extraReducers: builder =>

@@ -5,7 +5,7 @@ import css from './ProductBigCard.module.css'
 import { ColorSelect, ColorsBigCart } from '../../components/index';
 
 // Тествові картинки
-import img1 from './img1.jfif'
+// import img1 from './img1.jfif'
 import img2 from './img2.jfif'
 import img3 from './img3.jfif'
 import img4 from './img4.jfif'
@@ -26,7 +26,7 @@ const ProductBigCard = () => {
 
     const {one_product} = useSelector(state => state.flowerReducer)
 
-    const {name, volume, length, width, brand, orign_country, unit, weight, opt_price, colors} = one_product || { colors: [] }
+    const {name, volume, length, width, brand, orign_country, unit, weight, opt_price, colors, main_photo_path} = one_product || { colors: [] }
 
     useEffect(() => {
         dispatch(flowerAction.getById(id_))
@@ -34,10 +34,10 @@ const ProductBigCard = () => {
     },[dispatch, id_])
 
     return (
-        <>
+        <div>
             <div className={css.product_card_template}>
                 <div className={css.product_card_image_template}>
-                    <img src={img1} className={css.product_card_big_image} alt=""/>
+                    <img src={`http://45.132.105.143/images/${main_photo_path}`} className={css.product_card_big_image} alt=""/>
                     <div className={css.product_card_small_images_template}>
                         <img src={img2} className={css.product_card_small_image} alt=""/>
                         <img src={img3} className={css.product_card_small_image} alt=""/>
@@ -68,12 +68,12 @@ const ProductBigCard = () => {
                     </div>
                     <div className={css.product_price}><span>Цена:</span> {opt_price} р</div>
                     <div className={css.product_card_info}>
-                        <div className={css.product_cart_btn}>Добавить в корзину</div>
+                        <div className={css.product_cart_btn} onClick={() => setOpen(!isOpen)}>Добавить в корзину</div>
                     </div>
                 </div>
             </div>
             <ColorsBigCart open={isOpen} setOpen={setOpen} colors={colors || []}/>
-        </>
+        </div>
     );
 };
 

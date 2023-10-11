@@ -1,6 +1,6 @@
 .basket_container_open{
     position: absolute;
-    top: 27px;
+    top: 26px;
     right: 6px;
     display: flex;
     width: 467px;
@@ -19,7 +19,7 @@
 }
 .basket_container_close{
     position: absolute;
-    top: 27px;
+    top: 26px;
     right: -487px;
     display: flex;
     width: 467px;

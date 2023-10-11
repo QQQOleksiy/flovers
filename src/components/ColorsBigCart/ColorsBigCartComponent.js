@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from 'react';
+import {useDispatch} from "react-redux";
 
 import css from './ColorsBigCart.module.css'
-
 import { OneProductInColorCart } from '../index'
+import {flowerAction} from "../../redux";
 
 const ColorsBigCart = ({ open, setOpen, colors }) => {
-    const [updatedColors, setUpdatedColors] = useState(colors);
+    const [updatedColors, setUpdatedColors] = useState([colors]);
+
+    let dispatch = useDispatch();
 
     useEffect(() => {
         setUpdatedColors(colors);
@@ -17,8 +20,12 @@ const ColorsBigCart = ({ open, setOpen, colors }) => {
         );
 
         setUpdatedColors(updatedColorsArray);
-    };
 
+    };
+    const totalCost = updatedColors.reduce((total, product) => {
+        const productCost = product.opt_price * product.count;
+        return total + productCost;
+    }, 0);
     return (
         <div>
             { open &&
@@ -37,9 +44,12 @@ const ColorsBigCart = ({ open, setOpen, colors }) => {
 
                             <div className={css.total}>
                                 <div className={css.total_text}>Всего</div>
-                                <div className={css.total_count}>2000₽</div>
+                                <div className={css.total_count}>{totalCost}₽</div>
                             </div>
-                            <div className={css.basket_button} onClick={() => setOpen()}>Продолжить</div>
+                            <div className={css.basket_button} onClick={() => {
+                                setOpen()
+                                dispatch(flowerAction.add_product_in_basket(updatedColors.filter(color => color.count !== 0)))
+                            }}>Продолжить</div>
                         </div>
                     </div>
                     <div className={css.blur_bg}></div>
