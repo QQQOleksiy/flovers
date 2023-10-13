@@ -3,7 +3,7 @@
 - [ ] кнопочки шо скроляться (компонент)
 - [ ] поправити фон
 - [x] подивитися до шрифта (він трохи жирніший ніж в макеті)
-- [ ] OneProductInbasket (компонент)
+- [x] OneProductInbasket (компонент)
 - [ ] Головна (адаптив)
 
 # Getting Started with Create React App
