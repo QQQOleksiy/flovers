@@ -16,7 +16,7 @@ const HomePage = () => {
     const {similarItem} = useSelector(state => state.flowerReducer)
 
     useEffect(() => {
-        dispatch(flowerAction.getSimilar([184, 3]))
+        dispatch(flowerAction.getSimilar([240, 3]))
         window.scrollTo({ top: 0, behavior: 'smooth' });
     },[dispatch])
 
@@ -87,7 +87,7 @@ const HomePage = () => {
                 <h3 className={css.popular_text}>Популярное</h3>
                 <div className={css.popular_product_container}>
                     {
-                        similarItem.map(value => <ProductPreview  product={value}/>)
+                        similarItem.map(value => <ProductPreview  product={value} key={value.id}/>)
                     }
 
                 </div>

@@ -1,19 +1,16 @@
 import React, {useEffect} from 'react';
-
-import css from './ProductBigCard.module.css'
-
-import { ColorSelect, ColorsBigCart } from '../../components/index';
-
-// Тествові картинки
-// import img1 from './img1.jfif'
-import img2 from './img2.jfif'
-import img3 from './img3.jfif'
-import img4 from './img4.jfif'
 import {useDispatch, useSelector} from "react-redux";
-import {flowerAction} from "../../redux";
 import {useParams} from "react-router-dom";
 
-//
+import css from './ProductBigCard.module.css'
+import {flowerAction} from "../../redux";
+import { ColorSelect, ColorsBigCart } from '../../components/index';
+// Тествові картинки
+// import img1 from './img1.jfif'
+// import img2 from './img2.jfif'
+// import img3 from './img3.jfif'
+// import img4 from './img4.jfif'
+
 import { useState } from 'react';
 
 const ProductBigCard = () => {
@@ -26,7 +23,7 @@ const ProductBigCard = () => {
 
     const {one_product} = useSelector(state => state.flowerReducer)
 
-    const {name, volume, length, width, brand, orign_country, unit, weight, opt_price, colors, main_photo_path} = one_product || { colors: [] }
+    const {name, volume, length, width, brand, orign_country, unit, weight, opt_price, colors, main_photo_path = []} = one_product || { colors: [] }
 
     useEffect(() => {
         dispatch(flowerAction.getById(id_))
@@ -37,11 +34,11 @@ const ProductBigCard = () => {
         <div>
             <div className={css.product_card_template}>
                 <div className={css.product_card_image_template}>
-                    <img src={`http://45.132.105.143/images/${main_photo_path}`} className={css.product_card_big_image} alt=""/>
+                    <img src={`http://45.132.105.143/images/${main_photo_path[0]}`} className={css.product_card_big_image} alt=""/>
                     <div className={css.product_card_small_images_template}>
-                        <img src={img2} className={css.product_card_small_image} alt=""/>
-                        <img src={img3} className={css.product_card_small_image} alt=""/>
-                        <img src={img4} className={css.product_card_small_image} alt=""/>
+                        <img src={`http://45.132.105.143/images/${main_photo_path[1]}`} className={css.product_card_small_image} alt=""/>
+                        <img src={`http://45.132.105.143/images/${main_photo_path[2]}`} className={css.product_card_small_image} alt=""/>
+                        <img src={`http://45.132.105.143/images/${main_photo_path[3]}`} className={css.product_card_small_image} alt=""/>
                     </div>
                 </div>
                 <div className={css.product_card_text_template}>

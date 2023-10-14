@@ -1,10 +1,10 @@
 import React from 'react';
+import { useState } from 'react';
+import {useSelector} from "react-redux";
+import {useForm} from 'react-hook-form'
 
 import css from './BasketPage.module.css'
 import {OneProductInBigCart} from "../index";
-
-import { useState } from 'react';
-import {useSelector} from "react-redux";
 
 const BasketPageComponent = () => {
     const [step, setStep] = useState(0);
@@ -15,6 +15,18 @@ const BasketPageComponent = () => {
         const productCost = product.opt_price * product.count;
         return total + productCost;
     }, 0);
+
+    const {register, handleSubmit, reset, formState: {isValid}} = useForm();
+
+    const submit = (data) => {
+        console.log(data);
+    }
+
+    const handleOrderButtonClick = () => {
+        handleSubmit(submit)();
+        setStep(step + 1);
+        reset()
+    }
 
     return (
         <div>
@@ -54,25 +66,26 @@ const BasketPageComponent = () => {
                                 <svg width={81} height={24} style={{marginLeft: 30}} viewBox="0 0 81 22" fill="none" xmlns="http://www.w3.org/2000/svg" > <circle cx={11} cy={11} r={9} fill="#1F1F1F" stroke="#1F1F1F" strokeWidth={4} /> <circle cx={70} cy={11} r={9} fill="#D9D9D9" stroke="#1F1F1F" strokeWidth={4} /> <line x1="21.2715" y1="11.1714" x2="60.3572" y2="11.1714" stroke="#1F1F1F" strokeWidth={4} strokeDasharray="8 8" /> </svg>
                             </div>
 
-                            <div className={css.spase_for_products}>
+                            <form className={css.spase_for_products} onSubmit={handleSubmit(submit)}>
                                 <div className={css.form_background}>
                                     <span className={css.form_text}>Ваше Имя:</span>
-                                    <input className={css.form_input} type="text"/>
+                                    <input className={css.form_input} type="text" {...register('name')}/>
                                 </div>
                                 <div className={css.form_background}>
                                     <span className={css.form_text}>Номер телефона:</span>
-                                    <input className={css.form_input} type="tel"/>
+                                    <input className={css.form_input} type="tel" {...register('number')}/>
                                 </div>
                                 <div className={css.form_background}>
                                     <span className={css.form_text}>Название компании:</span>
-                                    <input className={css.form_input} type="text"/>
+                                    <input className={css.form_input} type="text" {...register('company')}/>
                                 </div>
-                            </div>
-                            <div className={css.form_tips_text}>
-                                <span className={css.form_top_tip}>Заполните поля выше.</span>
-                                <span className={css.form_bottom_tip}>Наш менеджер подтвердит заказ и свяжется с вами.</span>
-                            </div>
-                            <div className={css.basket_continue_btn} onClick={() => setStep(step+1)}>Оформить Заказ</div>
+                                <div className={css.form_tips_text}>
+                                    <span className={css.form_top_tip}>Заполните поля выше.</span>
+                                    <span className={css.form_bottom_tip}>Наш менеджер подтвердит заказ и свяжется с вами.</span>
+                                </div>
+                                <button className={css.basket_continue_btn} onClick={handleOrderButtonClick}>Оформить Заказ</button>
+                            </form>
+
                         </div>
                     </div>
                 </>
