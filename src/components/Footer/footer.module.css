@@ -11,7 +11,9 @@
 }
 
 .main_container{
-    width: 70%;
+    width: 1380px;
+    margin-left: auto;
+    margin-right: auto;
     height: 100%;
     flex-shrink: 0;
     display: flex;
@@ -52,7 +54,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-
 }
 
 .email_text{
@@ -115,4 +116,47 @@
 
 .main_container:last-child{
     align-items: center;
+}
+
+
+@media (max-width: 1580px) {
+    .footer {
+        height: 700px;
+    }
+
+    .main_container {
+        width: 690px;
+    }
+
+    .contacts{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .contacts > :nth-child(2){
+        padding-left: 70px;
+        padding-bottom: 20px;
+    }
+
+    .contacts > :nth-child(4){
+        padding-left: 70px;
+    }
+    
+
+    .email_text{
+        font-size: 24px;
+    }
+
+    .number_text{
+        font-size: 24px;
+    }
+
+    .email {
+        font-size: 16px;
+    }
+
+    .number {
+        font-size: 16px;
+    }
 }

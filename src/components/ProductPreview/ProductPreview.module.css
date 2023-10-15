@@ -57,3 +57,26 @@
     text-transform: capitalize;
     word-wrap: break-word
 }
+
+@media (max-width: 1440px) {
+    .product_pre {
+        width: auto;
+        margin: 10px;
+        margin-right: 10px;
+    }
+
+    .product_pre_text {
+        margin-top: 24px;
+    }
+
+    .product_big_image {
+        height: 320px;
+    }
+    .product_small_image {
+        height: 106px;
+    }
+
+    .product_small_image:last-child span {
+        font-size: 24px;
+    }
+}
