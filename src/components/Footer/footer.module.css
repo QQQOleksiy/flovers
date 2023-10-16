@@ -8,10 +8,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .main_container{
-    width: 1380px;
+    max-width: 1380px;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
@@ -125,7 +126,7 @@
     }
 
     .main_container {
-        width: 690px;
+        max-width: 690px;
     }
 
     .contacts{
@@ -158,5 +159,73 @@
 
     .number {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        height: 480px;
+    }
+
+    .main_container {
+        max-width: 350px;
+    }
+
+    .contacts > :nth-child(2){
+        padding-left: 8px;
+    }
+
+    .contacts > :nth-child(4){
+        padding-left: 8px;
+    }
+    
+    .upper_text {
+        color: black;
+        font-size: 24px;
+        font-weight: 700;
+        word-wrap: break-word
+    }
+
+    .lower_text {
+        color: #7E7E7E;
+        font-size: 16px;
+        font-weight: 510;
+        word-wrap: break-word;
+        max-width: 280px;
+    }
+
+    .email_text{
+        font-size: 18px;
+    }
+
+    .number_text{
+        font-size: 18px;
+    }
+
+    .email {
+        font-size: 14px;
+    }
+
+    .number {
+        font-size: 14px;
+    }
+
+    .obrabotka_data {
+        margin-top: 20px;
+        color: black;
+        font-size: 10px;
+        font-weight: 510;
+        text-decoration: underline;
+        word-wrap: break-word;
+        max-width: 150px;
+        text-align: center;
+    }
+    
+    .text_popusk {
+        color: black;
+        font-size: 10px;
+        font-weight: 510;
+        word-wrap: break-word;
+        text-align: center;
     }
 }

@@ -61,3 +61,27 @@
         grid-column: span 2 / span 2;
     }
 }
+
+
+@media (max-width: 768px) {
+    .catalog_product_container {
+        gap: 0;
+    }
+    .catalog_product_container > :nth-child(1) {
+        margin-left: 18px;
+        margin-right: 9px;
+    }
+    .catalog_product_container > :nth-child(2) {
+        margin-left: 0px;
+        margin-right: 18px;
+    }
+
+    .catalog_product_big_text {
+        margin-top: 24px;
+        color: #1F1F1F;
+        font-size: 24px;
+        font-weight: 510;
+        letter-spacing: 0.96px;
+        word-wrap: break-word
+    }
+}

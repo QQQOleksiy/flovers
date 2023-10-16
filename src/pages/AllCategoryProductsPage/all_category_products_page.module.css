@@ -55,3 +55,18 @@
         padding-left: 10px;
     }
 }
+
+@media (max-width: 1440px) {
+    .catalog_product_big_text {
+        margin-top: 24px;
+        color: #1F1F1F;
+        font-size: 24px;
+        font-weight: 510;
+        letter-spacing: 0.96px;
+        word-wrap: break-word
+    }
+    .catalog_products_container {
+        padding-right: 9px;
+        padding-left: 9px;
+    }
+}
