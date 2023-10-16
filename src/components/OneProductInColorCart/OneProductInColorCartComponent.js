@@ -20,7 +20,7 @@ const OneProductInColorCart = ({ one_color, onUpdateCount }) => {
     return (
         <div className={css.one_product_container}>
             <div className={css.first}>
-                <img src={`http://45.132.105.143/images/${photo_path}`} className={css.color_item}/>
+                <img src={`http://45.132.105.143/images/${photo_path}`} className={css.color_item} alt={photo_path}/>
                 {color_name}
             </div>
             <div className={css.second}>

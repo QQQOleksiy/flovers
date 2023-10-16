@@ -1,31 +1,46 @@
 import React from 'react';
 import { useState } from 'react';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useForm} from 'react-hook-form'
 
 import css from './BasketPage.module.css'
 import {OneProductInBigCart} from "../index";
+import {flowerAction} from "../../redux";
 
 const BasketPageComponent = () => {
     const [step, setStep] = useState(0);
 
-    const {products_in_basket} = useSelector(state => state.flowerReducer)
+    const { products_in_basket } = useSelector(state => state.flowerReducer);
+    const { register, handleSubmit, reset, formState: { isValid } } = useForm();
+
+    const dispatch = useDispatch();
 
     const totalCost = products_in_basket.reduce((total, product) => {
         const productCost = product.opt_price * product.count;
         return total + productCost;
     }, 0);
 
-    const {register, handleSubmit, reset, formState: {isValid}} = useForm();
-
     const submit = (data) => {
+        //Sorry for my messy code, I wanted to do it right
+        const form = new FormData();
+        const arr = JSON.stringify(products_in_basket)
+        form.append('phone ', data.number);
+        form.append('name', data.name);
+        form.append('title', data.company);
+        form.append('last_name', "TEST");
+        form.append('email', "mail@example.com");
+        form.append('cart', arr);
+        form.append('price', "11");
+        dispatch(flowerAction.sendData(form))
         console.log(data);
-    }
+        reset();
+    };
 
     const handleOrderButtonClick = () => {
         handleSubmit(submit)();
-        setStep(step + 1);
-        reset()
+        if (isValid) {
+            setStep(step + 1);
+        }
     }
 
     return (
@@ -69,11 +84,11 @@ const BasketPageComponent = () => {
                             <form className={css.spase_for_products} onSubmit={handleSubmit(submit)}>
                                 <div className={css.form_background}>
                                     <span className={css.form_text}>Ваше Имя:</span>
-                                    <input className={css.form_input} type="text" {...register('name')}/>
+                                    <input className={css.form_input} type="text" {...register('name', { required: true })}/>
                                 </div>
                                 <div className={css.form_background}>
                                     <span className={css.form_text}>Номер телефона:</span>
-                                    <input className={css.form_input} type="tel" {...register('number')}/>
+                                    <input className={css.form_input} type="tel" {...register('number', { required: true })}/>
                                 </div>
                                 <div className={css.form_background}>
                                     <span className={css.form_text}>Название компании:</span>
@@ -83,7 +98,7 @@ const BasketPageComponent = () => {
                                     <span className={css.form_top_tip}>Заполните поля выше.</span>
                                     <span className={css.form_bottom_tip}>Наш менеджер подтвердит заказ и свяжется с вами.</span>
                                 </div>
-                                <button className={css.basket_continue_btn} onClick={handleOrderButtonClick}>Оформить Заказ</button>
+                                <button className={css.basket_continue_btn} onClick={handleOrderButtonClick} disabled={!isValid}>Оформить Заказ</button>
                             </form>
 
                         </div>

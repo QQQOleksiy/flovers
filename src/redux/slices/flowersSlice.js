@@ -63,6 +63,18 @@ const getSimilar = createAsyncThunk(
     }
 )
 
+const sendData = createAsyncThunk(
+    'flowersSlice/sendData',
+    async (data_, thunkAPI) => {
+        try {
+            const {data} = await floversService.sendData(data_)
+            console.log(data);
+        }catch (e) {
+            return thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
+
 const flowerSlice = createSlice({
     name: 'flowerSlice',
     initialState,
@@ -105,7 +117,8 @@ const flowerAction = {
     getCategory,
     getById,
     getSimilar,
-    getAll
+    getAll,
+    sendData
 }
 
 export {
