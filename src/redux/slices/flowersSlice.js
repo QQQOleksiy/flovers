@@ -52,10 +52,10 @@ const getById = createAsyncThunk(
 )
 const getSimilar = createAsyncThunk(
     'flowersSlice/getSimilar',
-    async ([id, same], thunkAPI) => {
+    async (count, thunkAPI) => {
         try {
-            const {data} = await floversService.getById(id, same)
-            return data.data.same
+            const {data} = await floversService.getSimilar(count)
+            return data.data
 
         }catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)

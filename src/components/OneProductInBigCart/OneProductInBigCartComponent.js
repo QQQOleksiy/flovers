@@ -20,8 +20,8 @@ const OneProductInBigCart = ({product}) => {
                 <span>{product_name}</span>
             </div>
             <div className={css.second}>
-                Цвет: 
-                <div className={css.color_item} style={{backgroundColor: '#ccc'}}></div>
+                Цвет:
+                <img src={`http://45.132.105.143/images/${photo_path}`} className={css.color_item}/>
                 {color_name}
             </div>
             <div className={css.third}>

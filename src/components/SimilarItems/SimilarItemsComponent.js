@@ -17,7 +17,7 @@ const SimilarItems = ({count}) => {
     const {similarItem} = useSelector(state => state.flowerReducer)
 
     useEffect(() => {
-        dispatch(flowerAction.getSimilar([240, count]))
+        dispatch(flowerAction.getSimilar(count))
         window.scrollTo({ top: 0, behavior: 'smooth' });
     },[dispatch, id, count])
 

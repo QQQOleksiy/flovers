@@ -12,7 +12,7 @@ const CartPage = () => {
     return (
         <div className={css.cart_container}>
             <BasketPageComponent/>
-            <SimilarItems/>
+            <SimilarItems count={4}/>
         </div>
     );
 };

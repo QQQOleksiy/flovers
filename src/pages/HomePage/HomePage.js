@@ -16,7 +16,7 @@ const HomePage = () => {
     const {similarItem} = useSelector(state => state.flowerReducer)
 
     useEffect(() => {
-        dispatch(flowerAction.getSimilar([240, 3]))
+        dispatch(flowerAction.getSimilar(3))
         window.scrollTo({ top: 0, behavior: 'smooth' });
     },[dispatch])
 
