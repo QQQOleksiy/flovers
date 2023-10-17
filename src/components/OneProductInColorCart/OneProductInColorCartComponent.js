@@ -18,24 +18,48 @@ const OneProductInColorCart = ({ one_color, onUpdateCount }) => {
     };
 
     return (
-        <div className={css.one_product_container}>
-            <div className={css.first}>
-                <img src={`http://45.132.105.143/images/${photo_path}`} className={css.color_item} alt={photo_path}/>
-                {color_name}
-            </div>
-            <div className={css.second}>
-                На складе:
-                <span className={total ? css.on_sklad : css.no_on_sklad}>{total}</span>
-            </div>
-            <div className={css.third}>
-                Кол-во:
-                <input className={css.form_input} type="number" value={count.toString()} onChange={handleCountChange} />
-            </div>
-            <div className={css.four}>
-                <span className={css.price}>{opt_price}₽</span>
-                за шт.
+        <>
+        <div className={css.mobile}>
+            <div className={css.one_product_container}>
+                <div className={css.first}>
+                    <img src={`http://45.132.105.143/images/${photo_path}`} className={css.color_item} alt={photo_path}/>
+                    {color_name}
+                </div>
+                <div className={css.second}>
+                    На складе:
+                    <span className={total ? css.on_sklad : css.no_on_sklad}>{total}</span>
+                </div>
+                <div className={css.third}>
+                    Кол-во:
+                    <input className={css.form_input} type="number" value={count.toString()} onChange={handleCountChange} />
+                </div>
+                <div className={css.four}>
+                    <span className={css.price}>{opt_price}₽</span>
+                    за шт.
+                </div>
             </div>
         </div>
+        <div className={css.pc}>
+            <div className={css.one_product_container}>
+                <div className={css.first}>
+                    <img src={`http://45.132.105.143/images/${photo_path}`} className={css.color_item} alt={photo_path}/>
+                    {color_name}
+                </div>
+                <div className={css.four}>
+                    <span className={css.price}>{opt_price}₽</span>
+                    за шт.
+                </div>
+                <div className={css.second}>
+                    На складе:
+                    <span className={total ? css.on_sklad : css.no_on_sklad}>{total}</span>
+                </div>
+                <div className={css.third}>
+                    Кол-во:
+                    <input className={css.form_input} type="number" value={count.toString()} onChange={handleCountChange} />
+                </div>
+            </div>
+        </div>
+        </>
     );
 };
 
