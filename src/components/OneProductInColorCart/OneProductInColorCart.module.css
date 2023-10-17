@@ -154,6 +154,10 @@
         word-wrap: break-word;
         text-overflow: clip;
     }
+    .color_item{
+        width: 25px;
+        height: 25px;
+    }
     .price{
         font-size: 14px;
     }

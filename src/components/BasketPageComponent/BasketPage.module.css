@@ -237,3 +237,62 @@
     word-wrap: break-word;
     cursor: pointer;
 }
+
+
+.pc {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+@media (max-width: 1440px) {
+    .basket_container {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .basket_continue_btn {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 724px) {
+    .basket_content{
+        border-radius: 20px 20px 20px 20px;
+    }
+    .pc {
+        display: none;
+    }
+    .mobile {
+        display: block;   
+    }
+    .basket_content_title {
+        height: 50px;
+        border-radius: 20px 20px 0 0;
+    }
+    .basket_content_title > div {
+        margin-left: 30px;
+        font-size: 16px;
+    }
+    .total{
+        height: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .total_text{
+        font-size: 14px;
+    }
+    .total_count{
+        font-size: 14px;
+    }
+    .basket_continue_btn{
+        font-size: 16px;
+        margin-top: 12px;
+    }
+    .spase_for_products {
+        row-gap: 0px;
+    }
+}

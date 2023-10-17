@@ -52,7 +52,8 @@ const BasketPageComponent = () => {
                         <div className={css.basket_content}>
                             <div className={css.basket_content_title}>
                                 <div>Корзина</div>
-                                <svg width={81} height={24} style={{marginLeft: 30}} viewBox="0 0 81 22" fill="none" xmlns="http://www.w3.org/2000/svg" > <circle cx={11} cy={11} r={9} fill="#D9D9D9" stroke="#1F1F1F" strokeWidth={4} /> <circle cx={70} cy={11} r={9} stroke="#1F1F1F" strokeWidth={4} /> <line x1="21.2715" y1="11.1714" x2="60.3572" y2="11.1714" stroke="#1F1F1F" strokeWidth={4} strokeDasharray="8 8" /> </svg>
+                                <svg width={81} height={24} style={{marginLeft: 30}} className={css.pc} viewBox="0 0 81 22" fill="none" xmlns="http://www.w3.org/2000/svg" > <circle cx={11} cy={11} r={9} fill="#D9D9D9" stroke="#1F1F1F" strokeWidth={4} /> <circle cx={70} cy={11} r={9} stroke="#1F1F1F" strokeWidth={4} /> <line x1="21.2715" y1="11.1714" x2="60.3572" y2="11.1714" stroke="#1F1F1F" strokeWidth={4} strokeDasharray="8 8" /> </svg>
+                                <svg width={50} height={14} style={{marginLeft: 15}} className={css.mobile} viewBox="0 0 50 14" fill="none" xmlns="http://www.w3.org/2000/svg" > <circle cx="6.79012" cy="6.79012" r="5.79012" fill="#D9D9D9" stroke="#1F1F1F" strokeWidth={2} /> <circle cx="43.21" cy="6.79012" r="5.79012" stroke="#1F1F1F" strokeWidth={2} /> <line x1="13.1328" y1="7.13086" x2="37.2598" y2="7.13086" stroke="#1F1F1F" strokeWidth={2} strokeDasharray="8 8" /> </svg>
                             </div>
 
                             <div className={css.spase_for_products}>
@@ -78,7 +79,8 @@ const BasketPageComponent = () => {
                         <div className={css.basket_content}>
                             <div className={css.basket_content_title}>
                                 <div>Корзина</div>
-                                <svg width={81} height={24} style={{marginLeft: 30}} viewBox="0 0 81 22" fill="none" xmlns="http://www.w3.org/2000/svg" > <circle cx={11} cy={11} r={9} fill="#1F1F1F" stroke="#1F1F1F" strokeWidth={4} /> <circle cx={70} cy={11} r={9} fill="#D9D9D9" stroke="#1F1F1F" strokeWidth={4} /> <line x1="21.2715" y1="11.1714" x2="60.3572" y2="11.1714" stroke="#1F1F1F" strokeWidth={4} strokeDasharray="8 8" /> </svg>
+                                <svg width={81} height={24} style={{marginLeft: 30}} className={css.pc} viewBox="0 0 81 22" fill="none" xmlns="http://www.w3.org/2000/svg" > <circle cx={11} cy={11} r={9} fill="#1F1F1F" stroke="#1F1F1F" strokeWidth={4} /> <circle cx={70} cy={11} r={9} fill="#D9D9D9" stroke="#1F1F1F" strokeWidth={4} /> <line x1="21.2715" y1="11.1714" x2="60.3572" y2="11.1714" stroke="#1F1F1F" strokeWidth={4} strokeDasharray="8 8" /> </svg>
+                                <svg width={50} height={14} style={{marginLeft: 15}} className={css.mobile} viewBox="0 0 50 14" fill="none" xmlns="http://www.w3.org/2000/svg" > <circle cx="6.79012" cy="6.79012" r="5.79012" fill="#1F1F1F" stroke="#1F1F1F" strokeWidth={2} /> <circle cx="43.212" cy="6.79012" r="5.79012" stroke="#1F1F1F" strokeWidth={2} /> <line x1="13.1328" y1="7.13086" x2="37.2598" y2="7.13086" stroke="#1F1F1F" strokeWidth={2} strokeDasharray="8 8" /> </svg>
                             </div>
 
                             <form className={css.spase_for_products} onSubmit={handleSubmit(submit)}>
@@ -113,7 +115,8 @@ const BasketPageComponent = () => {
                         <div className={css.basket_content}>
                             <div className={css.basket_content_title}>
                                 <div>Корзина</div>
-                                <svg width={81} height={24} style={{marginLeft: 30}} viewBox="0 0 81 22" fill="none" xmlns="http://www.w3.org/2000/svg" > <circle cx={11} cy={11} r={9} fill="#1F1F1F" stroke="#1F1F1F" strokeWidth={4} /> <circle cx={70} cy={11} r={9} fill="#1F1F1F" stroke="#1F1F1F" strokeWidth={4} /> <line x1="21.2715" y1="11.1714" x2="60.3572" y2="11.1714" stroke="#1F1F1F" strokeWidth={4} strokeDasharray="8 8" /> </svg>
+                                <svg width={81} height={24} style={{marginLeft: 30}} className={css.pc} viewBox="0 0 81 22" fill="none" xmlns="http://www.w3.org/2000/svg" > <circle cx={11} cy={11} r={9} fill="#1F1F1F" stroke="#1F1F1F" strokeWidth={4} /> <circle cx={70} cy={11} r={9} fill="#1F1F1F" stroke="#1F1F1F" strokeWidth={4} /> <line x1="21.2715" y1="11.1714" x2="60.3572" y2="11.1714" stroke="#1F1F1F" strokeWidth={4} strokeDasharray="8 8" /> </svg>
+                                <svg width={50} height={14} style={{marginLeft: 15}} className={css.mobile} viewBox="0 0 50 14" fill="none" xmlns="http://www.w3.org/2000/svg" > <circle cx="6.79012" cy="6.79012" r="5.79012" fill="#1F1F1F" stroke="#1F1F1F" strokeWidth={2} /> <circle cx="43.212" cy="6.79012" r="5.79012" fill="#1F1F1F" stroke="#1F1F1F" strokeWidth={2} /> <line x1="13.1328" y1="7.13086" x2="37.2598" y2="7.13086" stroke="#1F1F1F" strokeWidth={2} strokeDasharray="8 8" /> </svg>
                             </div>
 
                             <div className={css.form_tips_text}>
