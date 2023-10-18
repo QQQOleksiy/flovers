@@ -100,7 +100,7 @@ const BasketPageComponent = () => {
                                     <span className={css.form_top_tip}>Заполните поля выше.</span>
                                     <span className={css.form_bottom_tip}>Наш менеджер подтвердит заказ и свяжется с вами.</span>
                                 </div>
-                                <button className={css.basket_continue_btn} onClick={handleOrderButtonClick} disabled={!isValid}>Оформить Заказ</button>
+                                <button className={css.basket_continue_btn +' '+ css.noContainer} onClick={handleOrderButtonClick} disabled={!isValid}>Оформить Заказ</button>
                             </form>
 
                         </div>

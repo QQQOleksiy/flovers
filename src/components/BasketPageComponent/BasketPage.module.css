@@ -179,7 +179,7 @@
 
 .form_input {
     height: 34px;
-    min-width: 250px;
+    width: 280px;
     border: none;
     outline: none;
     box-shadow: none;
@@ -257,11 +257,47 @@
         margin-left: 20px;
         margin-right: 20px;
     }
+    .noContainer{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .form_background{
+        min-height: 71px;
+    }
+    .form_text {
+        width: 30%;
+        text-align: end;
+        padding-left: 20px;
+        /* margin-top: 10px;
+        margin-bottom: 10px; */
+    }
+    .form_input {
+        margin-right: 20px;
+        width: 250px;
+    }
+    .final_order_btn{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .invoice_btn {
+        margin-bottom: 7px;
+    }
+    .final_tip{
+        max-width: calc(100% - 60px);
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 @media (max-width: 724px) {
     .basket_content{
         border-radius: 20px 20px 20px 20px;
+    }
+    .basket_container{
+        border-radius: 20px;
     }
     .pc {
         display: none;
@@ -291,8 +327,50 @@
     .basket_continue_btn{
         font-size: 16px;
         margin-top: 12px;
+        border-radius: 20px;
     }
     .spase_for_products {
         row-gap: 0px;
+        padding-bottom: 0px;
     }
+    /* 2 */
+    .form_background{
+        height: 57px;
+    }
+    .form_text {
+        font-size: 16px;
+        padding-left: 40px;
+    }
+    .form_input {
+        width: 120px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .form_top_tip{
+        font-size: 14px;
+        margin-top: 2px;
+        margin-bottom: 20px;
+    }
+    .form_bottom_tip{
+        font-size: 16px;
+    }
+    /* 3 */
+    .final_tip{
+        font-size: 16px;
+        max-width: calc(100% - 70px);
+        padding-left: 35px;
+        padding-right: 35px;
+        margin-top: 100px;
+    }
+    .invoice_btn {
+        font-size: 16px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .to_home_btn {
+        font-size: 16px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
 }
