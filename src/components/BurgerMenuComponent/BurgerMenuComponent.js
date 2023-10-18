@@ -1,9 +1,19 @@
-import React from 'react';
-import {useSelector} from "react-redux";
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
 
 import css from './burger_menu.module.css'
+import {flowerAction} from "../../redux";
+import MenuOnePositionComponent from "../MenuOnePositionComponent/MenuOnePositionComponent";
 
 const BurgerMenuComponent = () => {
+
+    const dispatch = useDispatch();
+
+    const {category} = useSelector(state => state.flowerReducer);
+
+    useEffect(() =>{
+        dispatch(flowerAction.getCategory())
+    }, [dispatch])
 
     const {burger_menu} = useSelector(state => state.flowerReducer);
 
@@ -14,12 +24,7 @@ const BurgerMenuComponent = () => {
                     <div>Товары</div>
                 </div>
                 <div className={css.landing}>
-                    <div>Категории</div>
-                    <div>Популярное</div>
-                    <div>Сезоны</div>
-                    <div>Коробки</div>
-                    <div>Корзины </div>
-                    <div>Аксессуары</div>
+                    {category.map((value, id) => <MenuOnePositionComponent category={value} key={id}/>)}
                 </div>
             </div>
             <div className={css.down_buttons}>

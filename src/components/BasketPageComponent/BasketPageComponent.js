@@ -32,7 +32,6 @@ const BasketPageComponent = () => {
         form.append('cart', arr);
         form.append('price', "11");
         dispatch(flowerAction.sendData(form))
-        console.log(data);
         reset();
     };
 

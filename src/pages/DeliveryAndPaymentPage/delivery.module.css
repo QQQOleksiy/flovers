@@ -1,0 +1,31 @@
+.container {
+    margin: 175px auto 100px;
+    max-width: 1387px;
+}
+.hr {
+    height: 1px;
+    background-color: #929292;
+    margin: 0;
+    border-color: rgb(0, 0, 0, 0);
+}
+
+.big_text {
+    color: #1F1F1F;
+    font-size: 64px;
+    font-weight: 510;
+    letter-spacing: 2.56px;
+    word-wrap: break-word;
+    margin-top: 35px;
+    margin-bottom: 62px;
+    cursor: pointer;
+}
+
+.text{
+    color: #1F1F1F;
+    font-family: SF Pro;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 270;
+    line-height: normal;
+    letter-spacing: -0.36px;
+}
