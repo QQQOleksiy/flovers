@@ -189,6 +189,33 @@
     }
 }
 
-@media (max-width: 768px) {
 
+@media (max-width: 1440px) {
+    .pc {
+        display: block;
+    }
+    .mobile {
+        display:none;   
+    }
+}
+
+@media (max-width: 768px) {
+    .first_bg {
+        width: calc(100% - 20px);
+        /* TODO: fix backdrop */
+    }
+    .pc {
+        display: none;
+    }
+    .mobile {
+        display: block;   
+    }
+    .second_bg {
+        display: none;
+    }
+    .text > svg {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -14px;
+    }
 }
