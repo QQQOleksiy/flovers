@@ -36,7 +36,7 @@ const BasketSideComponent = () => {
 
                 <div className={css.total}>
                     <div className={css.total_text}>Всего</div>
-                    <div className={css.total_count}>{totalCost}</div>
+                    <div className={css.total_count}>{totalCost}₽</div>
                 </div>
             </div>
             <div className={css.basket_button}  onClick={() => {navigate('/cart'); dispatch(flowerAction.open_basket())}}>
