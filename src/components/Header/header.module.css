@@ -189,13 +189,14 @@
     }
 }
 
+.mobile {
+    display: none;
+    height: 0px;
+}
 
 @media (max-width: 1440px) {
     .pc {
         display: block;
-    }
-    .mobile {
-        display:none;   
     }
 }
 
