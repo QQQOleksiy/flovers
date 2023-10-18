@@ -94,11 +94,11 @@ const HomePage = () => {
                 {/* Текст пропсами передаси */}
                 <div className={css.another_links}>
                     <hr className={css.home_product_hr}/>
-                    <h4 className={css.home_product_big_text}>Доставка и Оплата</h4>
+                    <h4 className={css.home_product_big_text} onClick={() => navigate('/delivery')}>Доставка и Оплата</h4>
                     <hr className={css.home_product_hr}/>
-                    <h4 className={css.home_product_big_text}>Возврат и Обмен</h4>
+                    <h4 className={css.home_product_big_text} onClick={() => navigate('/return')}>Возврат и Обмен</h4>
                     <hr className={css.home_product_hr}/>
-                    <h4 className={css.home_product_big_text}>Пользовательское Соглашение</h4>
+                    <h4 className={css.home_product_big_text} onClick={() => navigate('/terms')}>Пользовательское Соглашение</h4>
                 </div>
             </div>
         </div>

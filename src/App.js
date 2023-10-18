@@ -7,6 +7,9 @@ import CatalogPage from './pages/CatalogPage/CatalogPage';
 import ItemPage from './pages/ItemPage/ItemPage';
 import AllCategoryProductsPage from './pages/AllCategoryProductsPage/AllCategoryProductsPage';
 import CartPage from './pages/CartPage/CartPage';
+import DeliveryAndPaymentPage from "./pages/DeliveryAndPaymentPage/DeliveryAndPaymentPage";
+import ReturnAndExchangePage from "./pages/ReturnAndExchangePage/ReturnAndExchangePage";
+import TermsOfUsePage from "./pages/TermsOfUsePage/TermsOfUsePage";
 
 function App() {
     return (
@@ -19,6 +22,9 @@ function App() {
                     <Route path={'/item/:id'} element={<ItemPage/>}/>
                     <Route path={'/catalog/:product_type'} element={<AllCategoryProductsPage/>}/>
                     <Route path={'/cart'} element={<CartPage/>}/>
+                    <Route path={`/delivery`} element={<DeliveryAndPaymentPage/>}/>
+                    <Route path={`/return`} element={<ReturnAndExchangePage/>}/>
+                    <Route path={`/terms`} element={<TermsOfUsePage/>}/>
                 </Route>
             </Routes>
         </div>
