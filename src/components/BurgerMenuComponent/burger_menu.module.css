@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 2;
 }
 .burger_menu_container_close{
     position: absolute;
@@ -27,6 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 2;
 }
 
 .navigator{
@@ -108,9 +110,41 @@
 
 
 @media (max-width: 1440px) {
-    
+    .down_buttons {
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 768px) {
-       
+    .burger_menu_container_open{
+        width: 269px;
+        height: max-content;
+        top: 20px;
+    }
+    .burger_menu_container_close {
+        width: 269px;
+        height: max-content;
+        top: 20px;
+    }
+    .product_text {
+        height: 50px;
+    }
+    .product_text > div {
+        font-size: 16px;
+    }
+    .landing > div {
+        margin-top: 25px;
+        margin-left: 30px;
+    }
+    .down_buttons {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        height: max-content;
+        margin-top: 4px;
+    }
+    .down_buttons > div {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

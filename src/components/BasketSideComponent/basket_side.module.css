@@ -143,10 +143,12 @@
     .basket_container_open{
         width: 269px;
         height: max-content;
+        top: 20px;
     }
     .basket_container_close {
         width: 269px;
         height: max-content;
+        top: 20px;
     }
     .spase_for_products {
         height: 305px;
