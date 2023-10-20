@@ -27,9 +27,12 @@ const CatalogPage = () => {
 
 
         window.history.replaceState(null, null, newUrl);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     }, [dispatch, product_type, page, location.pathname, searchParams]);
 
+    useEffect(() =>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        dispatch(flowerAction.close_menu())
+    }, [dispatch])
 
     return (
         <div className={css.catalog_container}>

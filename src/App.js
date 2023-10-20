@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Navigate, Route, Routes} from "react-router-dom";
 
 import MainLayout from "./layouts/MainLayout/MainLayout";
@@ -12,6 +12,20 @@ import ReturnAndExchangePage from "./pages/ReturnAndExchangePage/ReturnAndExchan
 import TermsOfUsePage from "./pages/TermsOfUsePage/TermsOfUsePage";
 
 function App() {
+    useEffect(() => {
+        const preventZoom = event => {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        };
+
+        document.body.addEventListener('touchmove', preventZoom, { passive: false });
+
+        return () => {
+            document.body.removeEventListener('touchmove', preventZoom);
+        };
+    }, []);
+
     return (
         <div>
             <Routes>

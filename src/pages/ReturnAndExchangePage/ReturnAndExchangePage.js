@@ -2,12 +2,17 @@ import React, {useEffect} from 'react';
 
 
 import css from './return.module.css'
+import {flowerAction} from "../../redux";
+import {useDispatch} from "react-redux";
 
 const ReturnAndExchangePage = () => {
 
+    let dispatch = useDispatch();
+
     useEffect(() =>{
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, [])
+        dispatch(flowerAction.close_menu())
+    }, [dispatch])
 
     return (
         <div className={css.container}>

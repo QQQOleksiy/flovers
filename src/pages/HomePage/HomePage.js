@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
@@ -8,7 +8,36 @@ import {flowerAction} from "../../redux";
 import women from './women_.png'
 
 const HomePage = () => {
+    const svgRef = useRef(null);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
+        const svgElement = svgRef.current;
+
+
+        if (windowWidth < 768) {
+            svgElement.setAttribute('height', '1600');
+        }
+
+        else if (windowWidth < 1440) {
+            svgElement.setAttribute('height', '2700');
+        }
+
+        else {
+            svgElement.setAttribute('height', '2520');
+        }
+    }, [windowWidth]);
     let navigate = useNavigate();
 
     const dispatch = useDispatch();
@@ -17,12 +46,12 @@ const HomePage = () => {
 
     useEffect(() => {
         dispatch(flowerAction.getSimilar(3))
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     },[dispatch])
 
-    useEffect(() => {
+    useEffect(() =>{
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    },[])
+        dispatch(flowerAction.close_menu())
+    }, [dispatch])
 
     return (
         <div>
@@ -45,7 +74,7 @@ const HomePage = () => {
                 </div>
             </div>
             <div  className={css.in_down_bg}>
-                <svg width="1920" height="2520" viewBox="0 0 1920 3311" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <svg ref={svgRef} width="1920" height="2520" viewBox="0 0 1920 3311" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                     <g clip-path="url(#clip0_525_2379)">
                         <path d="M141.001 3.00001C86.6571 9.1356 0.000976562 37 0.000976562 37V353.5L0 3316H1920L1920 387.5C1853.83 363.333 1753.2 242.1 1542 224.5C1234.94 198.912 1064.23 330.123 743.501 258C490.112 201.02 420.001 -28.5 141.001 3.00001Z" fill="white"/>
                         <g opacity="0.7" filter="url(#filter0_f_525_2379)">

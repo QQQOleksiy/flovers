@@ -13,8 +13,12 @@ const CatalogPage = () => {
 
     useEffect(() =>{
         dispatch(flowerAction.getCategory())
-        window.scrollTo({ top: 0, behavior: 'smooth' });
         }, [dispatch])
+
+    useEffect(() =>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        dispatch(flowerAction.close_menu())
+    }, [dispatch])
 
     return (
         <div className={css.catalog_container}>

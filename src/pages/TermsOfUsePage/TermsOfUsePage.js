@@ -1,12 +1,17 @@
 import React, {useEffect} from 'react';
+import {useDispatch} from "react-redux";
 
 import css from './terms.module.css'
+import {flowerAction} from "../../redux";
 
 const TermsOfUsePage = () => {
 
+    let dispatch = useDispatch();
+
     useEffect(() =>{
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, [])
+        dispatch(flowerAction.close_menu())
+    }, [dispatch])
 
     return (
         <div className={css.container}>

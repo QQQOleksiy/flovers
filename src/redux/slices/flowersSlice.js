@@ -91,6 +91,9 @@ const flowerSlice = createSlice({
         delete_product_by_ids: (state, action) => {
             const { color_id, product_id } = action.payload;
             state.products_in_basket = state.products_in_basket.filter(product => !(product.color_id === color_id && product.product_id === product_id));
+        },
+        close_menu: (state) => {
+            state.burger_menu = false
         }
     },
     extraReducers: builder =>
