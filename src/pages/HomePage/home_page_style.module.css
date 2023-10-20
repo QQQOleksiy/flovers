@@ -17,6 +17,7 @@
 
 .up_bg > svg {
     width: 100%;
+    overflow: hidden;
 }
 
 
