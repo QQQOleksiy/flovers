@@ -135,8 +135,13 @@
     margin-left: 53px;
 }
 
-@media (max-width: 1440px) {
-    
+@media (max-width: 1500px) {
+    .basket_container_open{
+        top: 20px;
+    }
+    .basket_container_close {
+        top: 20px;
+    }        
 }
 
 @media (max-width: 768px) {

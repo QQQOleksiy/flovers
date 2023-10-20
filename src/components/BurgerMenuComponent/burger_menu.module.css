@@ -108,6 +108,14 @@
     font-variant: small-caps;
 }
 
+@media (max-width: 1500px) {
+    .burger_menu_container_open{
+        top: 20px;
+    }
+    .burger_menu_container_close {
+        top: 20px;
+    }        
+}
 
 @media (max-width: 1440px) {
     .down_buttons {
