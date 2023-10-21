@@ -31,7 +31,7 @@ const HomePage = () => {
         }else if (windowWidth < 1100) {
             svgElement.setAttribute('height', '2900');
         }else if (windowWidth < 1440) {
-            svgElement.setAttribute('height', '2600');
+            svgElement.setAttribute('height', '2700');
             svgElement.setAttribute('viewBox', '0 0 100% 100%');
         }
 
