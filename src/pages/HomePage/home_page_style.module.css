@@ -125,15 +125,18 @@
 }
 
 .in_down_bg{
-    max-width: 100%;
-    overflow: hidden;
+    max-width: 100%;    
 }
-
-.in_down_bg > svg {
+.in_down_bg > div {
+    width: 100vw;
     position: absolute;
     z-index: 1;
     top: 530px;
     overflow: hidden;
+}
+
+.svg_down {
+    min-width: 100%;
 }
 
 /* not used */
@@ -264,6 +267,9 @@
     .up_bg > img {
         display: none;
     }
+    .svg_down {
+        min-width: 1920px;
+    }
     .up_content_container {
         top: 300px;
         left: 0;
@@ -272,9 +278,11 @@
         padding-left: 80px;
         padding-right: 80px;
     }
-    .in_down_bg > svg {
+    
+    .in_down_bg > div {
         top: 170px;
     }
+    
     .title{
         color: #1F1F1F;
         font-size: 74px;
