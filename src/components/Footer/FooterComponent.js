@@ -1,8 +1,12 @@
 import React from 'react';
 
 import css from './footer.module.css'
+import {useNavigate} from "react-router-dom";
 
 const FooterComponent = () => {
+
+    let navigate = useNavigate();
+
     return (
         <footer className={css.footer}>
             <div className={css.main_container}>
@@ -34,7 +38,7 @@ const FooterComponent = () => {
                         </div>
                     </div>
                 </div>
-                <div className={css.obrabotka_data}>
+                <div className={css.obrabotka_data} onClick={() => navigate('/terms')}>
                     Политика в отношении обработки персональных данных
                 </div>
                 <div className={css.text_popusk}>COPYRIGHT © 2022 SINOWRAP.RU Вся информация и материалы, размещенные на
