@@ -47,7 +47,6 @@
 
 .title{
     color: #1F1F1F;
-    font-family: SF Pro, sans-serif;
     font-size: 96px;
     font-style: normal;
     font-weight: 650;
@@ -59,7 +58,6 @@
 .lower_title_text{
     padding-left: 10px;
     color: #1F1F1F;
-    font-family: SF Pro, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 270;
@@ -90,7 +88,6 @@
     width: 100%;
     text-align: center;
     color: #1F1F1F;
-    font-family: SF Pro, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 590;
@@ -116,7 +113,6 @@
     width: 100%;
     text-align: center;
     color: #1F1F1F;
-    font-family: SF Pro, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 590;
@@ -286,7 +282,6 @@
     .title{
         color: #1F1F1F;
         font-size: 74px;
-        font-family: SF Pro;
         font-weight: 650;
         text-transform: uppercase;
         word-wrap: break-word;
@@ -345,7 +340,6 @@
     .title{
         color: #1F1F1F;
         font-size: 48px;
-        font-family: SF Pro;
         font-weight: 650;
         text-transform: uppercase;
         word-wrap: break-word;
@@ -360,7 +354,6 @@
     .lower_title_text {
         color: #1F1F1F;
         font-size: 14px;
-        font-family: SF Pro;
         font-weight: 270;
         word-wrap: break-word;
         text-align: center;
@@ -381,7 +374,6 @@
     .button_catalog > div{
         color: #1F1F1F;
         font-size: 16px;
-        font-family: SF Pro;
         font-weight: 590;
         word-wrap: break-word
     }
@@ -397,7 +389,6 @@
     .button_price_list > div{
         color: #1F1F1F;
         font-size: 16px;
-        font-family: SF Pro;
         font-weight: 590;
         word-wrap: break-word
     }
