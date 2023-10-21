@@ -110,6 +110,9 @@ const flowerSlice = createSlice({
             .addCase(getAll.fulfilled, (state, action) => {
                 state.all_with_paginate = action.payload
             })
+            .addCase(sendData.fulfilled, state => {
+                state.products_in_basket = []
+            })
 })
 
 

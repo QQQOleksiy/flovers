@@ -27,14 +27,18 @@ const HomePage = () => {
 
 
         if (windowWidth < 768) {
-            svgElement.setAttribute('height', '1600');
+            svgElement.setAttribute('height', '1700');
+        }else if (windowWidth < 1100) {
+            svgElement.setAttribute('height', '2900');
+        }else if (windowWidth < 1440) {
+            svgElement.setAttribute('height', '2600');
+            svgElement.setAttribute('viewBox', '0 0 100% 100%');
         }
 
-        else if (windowWidth < 1440) {
-            svgElement.setAttribute('height', '2700');
-        }
-
-        else {
+        else if (windowWidth < 1920){
+            svgElement.setAttribute('height', '2400');
+            svgElement.setAttribute('viewBox', '0 0 1920 3311');
+        } else{
             svgElement.setAttribute('height', '2520');
         }
     }, [windowWidth]);

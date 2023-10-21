@@ -11,7 +11,8 @@ const OneProductInColorCart = ({ one_color, onUpdateCount }) => {
 
     const handleCountChange = (event) => {
         const newCount = event.target.value;
-        if (!isNaN(newCount)) {
+
+        if (!isNaN(newCount) && newCount >= 0 && newCount <= total) {
             setCount(parseInt(newCount, 10));
             onUpdateCount({ ...one_color, count: parseInt(newCount, 10) });
         }
@@ -31,7 +32,7 @@ const OneProductInColorCart = ({ one_color, onUpdateCount }) => {
                 </div>
                 <div className={css.third}>
                     Кол-во:
-                    <input className={css.form_input} type="number" value={count.toString()} onChange={handleCountChange} />
+                    <input className={css.form_input} type="number" value={count.toString()} onChange={handleCountChange} max={total} min={0}/>
                 </div>
                 <div className={css.four}>
                     <span className={css.price}>{opt_price}₽</span>
@@ -55,7 +56,7 @@ const OneProductInColorCart = ({ one_color, onUpdateCount }) => {
                 </div>
                 <div className={css.third}>
                     Кол-во:
-                    <input className={css.form_input} type="number" value={count.toString()} onChange={handleCountChange} />
+                    <input className={css.form_input} type="number" value={count.toString()} onChange={handleCountChange} max={total} min={0}/>
                 </div>
             </div>
         </div>
