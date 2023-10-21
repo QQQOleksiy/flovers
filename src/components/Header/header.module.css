@@ -172,7 +172,7 @@
 
     .text > svg {
         padding-top: 10px;
-        height: 50px;
+        height: 41px;
     }
     .menu > svg {
         height: 18px;
@@ -204,6 +204,9 @@
     .first_bg {
         width: calc(100% - 20px);
         /* TODO: fix backdrop */
+    }
+    .text > svg {
+        height: 50px;
     }
     .pc {
         display: none;
