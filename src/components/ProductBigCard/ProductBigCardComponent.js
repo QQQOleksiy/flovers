@@ -70,6 +70,10 @@ const ProductBigCard = () => {
                 </div>
             </div>
             <ColorsBigCart open={isOpen} setOpen={setOpen} colors={colors || []}/>
+            <div className={css.desc}>
+                <h1 className={css.desc_big}>Описание товара:</h1>
+                <p className={css.desc_text}>{description}</p>
+            </div>
         </div>
     );
 };
