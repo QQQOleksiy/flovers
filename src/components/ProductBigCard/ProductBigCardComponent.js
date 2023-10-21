@@ -23,7 +23,7 @@ const ProductBigCard = () => {
 
     const {one_product} = useSelector(state => state.flowerReducer)
 
-    const {name, volume, length, width, brand, orign_country, unit, weight, opt_price, colors, main_photo_path = []} = one_product || { colors: [] }
+    const {name, description, volume, length, width, brand, orign_country, unit, weight, opt_price, colors, main_photo_path = []} = one_product || { colors: [] }
 
     useEffect(() => {
         dispatch(flowerAction.getById(id_))
