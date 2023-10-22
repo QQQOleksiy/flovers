@@ -59,7 +59,7 @@
 .basket_content_title > div {
     margin-left: 45px;
     color: #1F1F1F;
-    font-family: SF Pro, Arial, sans-serif;
+    
     font-size: 24px;
     font-style: normal;
     font-weight: 510;
@@ -95,7 +95,7 @@
 
 .total_text{
     color: #1F1F1F;
-    font-family: SF Pro, Arial, sans-serif;
+    
     font-size: 20px;
     font-style: normal;
     font-weight: 510;
@@ -105,7 +105,7 @@
 
 .total_count{
     color: #4DC130;
-    font-family: SF Pro, Arial, sans-serif;
+    
     font-size: 20px;
     font-style: normal;
     font-weight: 510;
@@ -126,7 +126,7 @@
 
 .basket_button > div {
     color: #1F1F1F;
-    font-family: SF Pro, Arial, sans-serif;
+    
     font-size: 24px;
     font-style: normal;
     font-weight: 510;
