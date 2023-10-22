@@ -56,8 +56,10 @@ const ProductBigCard = () => {
                         <span>{brand}</span>
                         <span className={css.product_description_bold}>Страна производитель:</span>
                         <span>{orign_country}</span>
+                        {/*                         
                         <span className={css.product_description_bold}>Упаковка:</span>
                         <span>{unit}</span>
+                         */}
                         <span className={css.product_description_bold}>Измерения:</span>
                         <span>{`${volume}x${length}x${width}`}</span>
                         <span className={css.product_description_bold}>Вес:</span>
