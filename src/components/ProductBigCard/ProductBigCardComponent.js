@@ -48,8 +48,10 @@ const ProductBigCard = () => {
                         <ColorSelect colors={colors || []} />
                     </div>
                     <div className={css.product_description}>
+                        {/* 
                         <span className={css.product_description_bold}>Артикул: </span>
-                        <span>1 коробка</span>
+                        <span>1 коробка</span> 
+                        */}
                         <span className={css.product_description_bold}>Размер:</span>
                         <span>{`${volume}x${length}x${width}`}</span>
                         <span className={css.product_description_bold}>Бренд:</span>
@@ -59,11 +61,15 @@ const ProductBigCard = () => {
                         {/*                         
                         <span className={css.product_description_bold}>Упаковка:</span>
                         <span>{unit}</span>
-                         */}
+                        */}
                         <span className={css.product_description_bold}>Измерения:</span>
                         <span>{`${volume}x${length}x${width}`}</span>
                         <span className={css.product_description_bold}>Вес:</span>
                         <span>{weight}</span>
+                        {/* 
+                        <span className={css.product_description_bold}>Минимальный заказ:</span>
+                        <span>{count} коробка</span> 
+                        */}
                     </div>
                     <div className={css.product_price}><span>Цена:</span> {opt_price} р</div>
                     <div className={css.product_card_info}>
