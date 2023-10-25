@@ -93,7 +93,8 @@ const flowerSlice = createSlice({
             state.products_in_basket = state.products_in_basket.filter(product => !(product.color_id === color_id && product.product_id === product_id));
         },
         close_menu: (state) => {
-            state.burger_menu = false
+            state.burger_menu = false;
+            state.basket_open = false;
         }
     },
     extraReducers: builder =>
