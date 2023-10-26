@@ -94,6 +94,8 @@ const flowerSlice = createSlice({
         },
         close_menu: (state) => {
             state.burger_menu = false;
+        },
+        close_basket: (state) => {
             state.basket_open = false;
         }
     },

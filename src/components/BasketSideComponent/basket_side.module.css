@@ -15,7 +15,7 @@
     backdrop-filter: blur(50px);
     box-sizing: border-box;
     transition: 0.8s;
-    z-index: 2;
+    z-index: 4;
 }
 .basket_container_close{
     position: absolute;
@@ -44,7 +44,6 @@
     border-radius: 36px 36px 20px 20px;
     background: rgba(255, 255, 255, 0.50);
 }
-
 .basket_content_title {
     width: 100%;
     height: 72px;
@@ -54,17 +53,30 @@
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.03);
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .basket_content_title > div {
-    margin-left: 45px;
     color: #1F1F1F;
-    
     font-size: 24px;
     font-style: normal;
     font-weight: 510;
     line-height: normal;
     font-variant: small-caps;
+}
+
+.korzina {
+    fill: #FFF;
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #FFF;
+    cursor: pointer;
+    margin-left: 120px;
 }
 
 .spase_for_products {
@@ -141,7 +153,7 @@
     }
     .basket_container_close {
         top: 20px;
-    }        
+    }
 }
 
 @media (max-width: 768px) {
@@ -184,5 +196,15 @@
     }
     .total_count{
         font-size: 14px;
+    }
+    .korzina {
+        height: 39px;
+        width: 39px;
+        margin-left: 70px;
+    }
+
+    .korzina > svg {
+        height: 39px;
+        width: 39px;
     }
 }

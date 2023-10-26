@@ -26,12 +26,23 @@ const BurgerMenuComponent = () => {
             top: document.documentElement.scrollHeight,
             behavior: 'smooth',
         });
+        dispatch(flowerAction.open_menu())
     };
 
     return (
         <div className={burger_menu ? css.burger_menu_container_open : css.burger_menu_container_close} ref={menuRef}>
             <div className={css.navigator}>
                 <div className={css.product_text}>
+                    <div className={css.menu} onClick={() => dispatch(flowerAction.open_menu())}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25" fill="none">
+                            <line x1="3.5" y1="12.5" x2="28.5" y2="12.5" stroke="#1F1F1F" stroke-width="3"
+                                  stroke-linecap="round"/>
+                            <line x1="3.5" y1="3.5" x2="28.5" y2="3.5" stroke="#1F1F1F" stroke-width="3"
+                                  stroke-linecap="round"/>
+                            <line x1="3.5" y1="21.5" x2="28.5" y2="21.5" stroke="#1F1F1F" stroke-width="3"
+                                  stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <div>Товары</div>
                 </div>
                 <div className={css.landing}>
