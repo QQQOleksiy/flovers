@@ -121,15 +121,17 @@
     background: #FFF;
     cursor: pointer;
     margin-right: 120px;
+    margin-left: 10px;
 }
 
 @media (max-width: 1500px) {
     .burger_menu_container_open{
-        top: 20px;
+        top: 16px;
+        left: 6px;
     }
     .burger_menu_container_close {
         top: 20px;
-    }        
+    }
 }
 
 @media (max-width: 1440px) {
@@ -142,7 +144,8 @@
     .burger_menu_container_open{
         width: 269px;
         height: max-content;
-        top: 20px;
+        top: 16px;
+        left: 6px;
     }
     .burger_menu_container_close {
         width: 269px;
