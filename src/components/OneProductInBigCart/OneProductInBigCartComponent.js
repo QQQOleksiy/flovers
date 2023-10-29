@@ -23,7 +23,7 @@ const OneProductInBigCart = ({product}) => {
                     </div>
                     <div className={css.second}>
                         Цвет:
-                        <img src={`http://45.132.105.143/images/${photo_path}`} className={css.color_item} alt={photo_path}/>
+                        <img src={`https://www.sinowrap.online/static/${photo_path}`} className={css.color_item} alt={photo_path}/>
                         {color_name}
                     </div>
                     <div className={css.third}>
@@ -42,7 +42,7 @@ const OneProductInBigCart = ({product}) => {
                         <div className={css.price}>{count*opt_price}₽</div>
                     </div>
                     <div className={css.second}>
-                        <img src={`http://45.132.105.143/images/${photo_path}`} className={css.color_item} alt={photo_path}/>
+                        <img src={`https://www.sinowrap.online/static/${photo_path}`} className={css.color_item} alt={photo_path}/>
                         {color_name}
                     </div>
                     <div className={css.third}>

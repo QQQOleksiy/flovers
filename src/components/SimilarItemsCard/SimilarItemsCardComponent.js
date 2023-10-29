@@ -12,7 +12,7 @@ const SimilarItemsCard = ({card}) => {
 
     return (
         <div className={css.similar_item_container} onClick={() => navigate(`/item/${id}`)}>
-            <img src={`http://45.132.105.143/images/${main_photo_path[0]}`} className={css.similar_item_image} alt=""/>
+            <img src={`https://www.sinowrap.online/static/${main_photo_path[0]}`} className={css.similar_item_image} alt=""/>
             <span className={css.similar_item_title_text}>{name}</span>
         </div>
     );
