@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
 import css from './home_page_style.module.css'
-import { ProductPreview} from '../../components/index'
+import { ProductPreview, HomePopup } from '../../components/index'
 import {flowerAction} from "../../redux";
 import women from './women_.png'
 
@@ -126,14 +126,10 @@ const HomePage = () => {
                     }
 
                 </div>
-                {/* Текст пропсами передаси */}
                 <div className={css.another_links}>
-                    <hr className={css.home_product_hr}/>
-                    <h4 className={css.home_product_big_text} onClick={() => navigate('/delivery')}>Доставка и Оплата</h4>
-                    <hr className={css.home_product_hr}/>
-                    <h4 className={css.home_product_big_text} onClick={() => navigate('/return')}>Возврат и Обмен</h4>
-                    <hr className={css.home_product_hr}/>
-                    <h4 className={css.home_product_big_text} onClick={() => navigate('/terms')}>Пользовательское Соглашение</h4>
+                    <HomePopup/>
+                    <HomePopup/>
+                    <HomePopup/>
                 </div>
             </div>
         </div>
