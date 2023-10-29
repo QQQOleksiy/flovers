@@ -127,9 +127,9 @@ const HomePage = () => {
 
                 </div>
                 <div className={css.another_links}>
-                    <HomePopup/>
-                    <HomePopup/>
-                    <HomePopup/>
+                    <HomePopup num={1}/>
+                    <HomePopup num={2}/>
+                    <HomePopup num={3}/>
                 </div>
             </div>
         </div>
