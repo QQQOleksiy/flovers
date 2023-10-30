@@ -52,7 +52,7 @@ const ColorsBigCart = ({ open, setOpen, colors }) => {
                             }}>Продолжить</div>
                         </div>
                     </div>
-                    <div className={css.blur_bg}onClick={() => {setOpen()}}></div>
+                    <div className={css.blur_bg} onClick={() => {setOpen()}}></div>
                 </div>
             }
         </div>
