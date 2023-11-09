@@ -102,7 +102,8 @@
     font-size: 16px;
     font-weight: 510;
     text-decoration: underline;
-    word-wrap: break-word
+    word-wrap: break-word;
+    cursor: pointer;
 }
 
 .text_popusk {
