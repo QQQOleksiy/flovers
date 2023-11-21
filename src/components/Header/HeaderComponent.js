@@ -72,7 +72,7 @@ const HeaderComponent = () => {
                                 stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <div className={css.price_text}>
+                    <div className={css.price_text} onClick={() => window.location.href = 'http://89.105.201.25/price_list.xlsx'}>
                         Прайс-лист
                     </div>
                 </div>
