@@ -23,7 +23,7 @@ const OneProductInColorCart = ({ one_color, onUpdateCount }) => {
         <div className={css.mobile}>
             <div className={css.one_product_container}>
                 <div className={css.first}>
-                    <img src={`https://www.sinowrap.online/static/${photo_path}`} className={css.color_item} alt={photo_path}/>
+                    <img src={`http://89.105.201.25/${photo_path}`} className={css.color_item} alt={photo_path}/>
                     {color_name}
                 </div>
                 <div className={css.second}>
