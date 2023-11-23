@@ -117,7 +117,6 @@ const flowerSlice = createSlice({
                     state.products_in_basket = [...state.products_in_basket, productToAdd];
                 }
             });
-            console.log(state.products_in_basket);
         },
         delete_product_by_ids: (state, action) => {
             const { color_id, product_id } = action.payload;
