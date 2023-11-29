@@ -17,6 +17,8 @@ const ProductBigCard = () => {
 
     const [isOpen, setOpen] = useState(false);
 
+    let [photo_id, setPhoto_id] = useState(0);
+
     let {id: id_} = useParams();
 
     const dispatch = useDispatch();
@@ -34,11 +36,11 @@ const ProductBigCard = () => {
         <div>
             <div className={css.product_card_template}>
                 <div className={css.product_card_image_template}>
-                    <img src={`http://89.105.201.25/${main_photo_path[0]}`} className={css.product_card_big_image} alt=""/>
+                    <img src={`http://89.105.201.25/${main_photo_path[photo_id]}`} className={css.product_card_big_image} alt=""/>
                     <div className={css.product_card_small_images_template}>
-                        <img src={`http://89.105.201.25/${main_photo_path[1]}`} className={css.product_card_small_image} alt=""/>
-                        <img src={`http://89.105.201.25/${main_photo_path[2]}`} className={css.product_card_small_image} alt=""/>
-                        <img src={`http://89.105.201.25/${main_photo_path[3]}`} className={css.product_card_small_image} alt=""/>
+                        <img onClick={()=>setPhoto_id(1)} src={`http://89.105.201.25/${main_photo_path[1]}`} className={css.product_card_small_image} alt=""/>
+                        <img onClick={()=>setPhoto_id(2)} src={`http://89.105.201.25/${main_photo_path[2]}`} className={css.product_card_small_image} alt=""/>
+                        <img onClick={()=>setPhoto_id(3)} src={`http://89.105.201.25/${main_photo_path[3]}`} className={css.product_card_small_image} alt=""/>
                     </div>
                 </div>
                 <div className={css.product_card_text_template}>
