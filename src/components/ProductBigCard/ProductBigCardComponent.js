@@ -23,7 +23,7 @@ const ProductBigCard = () => {
 
     const {one_product} = useSelector(state => state.flowerReducer)
 
-    const {name, description, volume, length, width, brand, orign_country, weight, opt_price, colors, main_photo_path = []} = one_product || { colors: [] }
+    const {name, description, length, width, brand, orign_country, weight, opt_price, colors, main_photo_path = []} = one_product || { colors: [] }
 
     const [photo_id, setPhoto] = useState();
 
@@ -59,7 +59,7 @@ const ProductBigCard = () => {
                         <span>1 коробка</span> 
                         */}
                         <span className={css.product_description_bold}>Размер:</span>
-                        <span>{`${volume}x${length}x${width}`}</span>
+                        <span>{`${length}x${width}`}</span>
                         <span className={css.product_description_bold}>Бренд:</span>
                         <span>{brand}</span>
                         <span className={css.product_description_bold}>Страна производитель:</span>
@@ -69,7 +69,7 @@ const ProductBigCard = () => {
                         <span>{unit}</span>
                         */}
                         <span className={css.product_description_bold}>Измерения:</span>
-                        <span>{`${volume}x${length}x${width}`}</span>
+                        <span>{`${length}x${width}`}</span>
                         <span className={css.product_description_bold}>Вес:</span>
                         <span>{weight}</span>
                         {/* 
