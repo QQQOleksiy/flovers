@@ -68,7 +68,7 @@
     height: 64px;
     fill: #1F1F1F;
     z-index: 1;
-    padding-top: 25px;
+    /*padding-top: 25px;*/
     cursor: pointer;
 }
 
@@ -172,7 +172,7 @@
 
     .text > svg {
         padding-top: 10px;
-        height: 41px;
+        height: 35px;
     }
     .menu > svg {
         height: 18px;
@@ -220,6 +220,7 @@
     .text > svg {
         margin-left: auto;
         margin-right: auto;
-        margin-top: -14px;
+        /*margin-top: -14px;*/
+        height: 35px;
     }
 }
