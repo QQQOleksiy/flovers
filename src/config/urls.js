@@ -1,4 +1,4 @@
-const baseURL = 'http://sinowrap.ru/back/api';
+const baseURL = 'http://1florcentre.ru/back/api';
 
 const urls = {
     getAllPositions:(page, type) => `/positions/all?pag=${page}&page_size=12&category=${type}`,

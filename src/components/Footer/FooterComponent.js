@@ -19,7 +19,7 @@ const FooterComponent = () => {
                         <div>
                             <div className={css.email_text}>Email</div>
                             <a href="mailto:sinowrap@mail.ru" className={css.email}>
-                                sinowrap@mail.ru
+                                1florcentre@list.ru
                             </a>
                         </div>
                         <div>
@@ -29,7 +29,7 @@ const FooterComponent = () => {
                         </div>
                         <div>
                             <div className={css.number_text}>Адрес</div>
-                            <div className={css.number}>Россия, Приморский край, г. Уссурийск (ТУТ ДОПИШЕМ ПОЗЖЕ)</div>
+                            <div className={css.number}>Уссурийск, ул. Льва Толстого 25 ст 2</div>
                         </div>
                         <div>
                             <div className={css.number_text}>Режим работы</div>
