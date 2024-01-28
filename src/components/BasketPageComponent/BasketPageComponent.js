@@ -21,7 +21,7 @@ const BasketPageComponent = () => {
     const totalCost = products_in_basket.reduce((total, product) => {
         const productCost = product.opt_price * product.count;
         return total + productCost;
-    }, 0);
+    }, 0).toFixed(2);
 
     const submit = (data) => {
         //Sorry for my messy code, I wanted to do it right

@@ -10,11 +10,11 @@ const OneProductInColorCart = ({ one_color, onUpdateCount }) => {
     const [count, setCount] = useState(initialCount);
 
     const handleCountChange = (event) => {
-        const newCount = event.target.value;
+        const newCount = parseInt(event.target.value, 10);
 
-        if (newCount === '' || (!isNaN(newCount) && newCount >= 0 && newCount <= total)) {
-            setCount(newCount === '' ? 0 : parseInt(newCount, 10));
-            onUpdateCount({ ...one_color, count: newCount === '' ? 0 : parseInt(newCount, 10) });
+        if (!isNaN(newCount) && newCount >= 0 && newCount <= total) {
+            setCount(newCount);
+            onUpdateCount({ ...one_color, count: newCount });
         }
     };
 

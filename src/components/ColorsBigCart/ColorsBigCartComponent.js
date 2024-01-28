@@ -25,7 +25,7 @@ const ColorsBigCart = ({ open, setOpen, colors }) => {
     const totalCost = updatedColors.reduce((total, product) => {
         const productCost = product.opt_price * product.count;
         return total + productCost;
-    }, 0);
+    }, 0).toFixed(2);
     return (
         <div>
             { open &&

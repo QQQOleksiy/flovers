@@ -23,7 +23,7 @@ const BasketSideComponent = () => {
     const totalCost = products_in_basket.reduce((total, product) => {
         const productCost = product.opt_price * product.count;
         return total + productCost;
-    }, 0);
+    }, 0).toFixed(2);
 
     return (
         <div className={basket_open ? css.basket_container_open : css.basket_container_close} ref={basketRef}>

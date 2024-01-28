@@ -18,7 +18,7 @@ const OneProductInBasket = ({product}) => {
         <div className={css.one_product_container}>
             <div className={css.one}>{product_name}</div>
             <div className={css.two}>{count}</div>
-            <div className={css.three}>{count*opt_price}₽</div>
+            <div className={css.three}>{(count*opt_price).toFixed(2)}₽</div>
             <div className={css.four} onClick={handleDeleteProduct}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
                     <path d="M9.79816 0.707092L0.707275 9.79797M10.0002 9.99992L0.90935 0.909043" stroke="#1F1F1F" strokeWidth="2"/>
