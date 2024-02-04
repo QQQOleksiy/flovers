@@ -10,6 +10,7 @@ const initialState = {
     products_in_basket: [],
     burger_menu: false,
     basket_open: false,
+    categoryList: []
 };
 
 const getAll = createAsyncThunk(
@@ -69,6 +70,18 @@ const sendData = createAsyncThunk(
         try {
             const {data} = await floversService.sendData(data_)
             console.log(data);
+        }catch (e) {
+            return thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
+const getCategoryList = createAsyncThunk(
+    'flowersSlice/getCategoryList',
+    async (_, thunkAPI) => {
+        try {
+            const {data} = await floversService.getCategoryList()
+            console.log(data);
+            return data
         }catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
         }
@@ -146,6 +159,9 @@ const flowerSlice = createSlice({
             .addCase(sendData.fulfilled, state => {
                 state.products_in_basket = []
             })
+            .addCase(getCategoryList.fulfilled, (state, action) => {
+                state.categoryList = action.payload
+            })
 })
 
 
@@ -157,7 +173,8 @@ const flowerAction = {
     getById,
     getSimilar,
     getAll,
-    sendData
+    sendData,
+    getCategoryList
 }
 
 export {

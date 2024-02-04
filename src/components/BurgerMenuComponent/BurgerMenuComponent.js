@@ -11,14 +11,14 @@ const BurgerMenuComponent = () => {
     let menuRef = useRef(null);
 
     const dispatch = useDispatch();
-    const { category, burger_menu} = useSelector(state => state.flowerReducer);
+    const {categoryList, burger_menu} = useSelector(state => state.flowerReducer);
 
     useClickOutside(menuRef, () => dispatch(flowerAction.close_menu()))
 
     let navigate = useNavigate();
 
     useEffect(() =>{
-        dispatch(flowerAction.getCategory())
+        dispatch(flowerAction.getCategoryList())
     }, [dispatch])
 
     const scrollToBottom = () => {
@@ -46,7 +46,7 @@ const BurgerMenuComponent = () => {
                     <div>Товары</div>
                 </div>
                 <div className={css.landing}>
-                    {category.map((value, id) => <MenuOnePositionComponent category={value} key={id}/>)}
+                    {categoryList.map((value, id) => <MenuOnePositionComponent category={value} key={id}/>)}
                 </div>
             </div>
             <div className={css.down_buttons}  onClick={() => navigate('/delivery')}>

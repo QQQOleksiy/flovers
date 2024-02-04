@@ -1,11 +1,12 @@
-const baseURL = 'http://1florcentre.ru/back/api';
+const baseURL = 'http://89.105.201.25:8000/api';
 
 const urls = {
     getAllPositions:(page, type) => `/positions/all?pag=${page}&page_size=12&category=${type}`,
     positionById:(id, same) => `/positions/?id=${id}&same=${same || 4}`,
     previousCatalog:() => '/positions/category',
     randomPosition:(count) => `/positions/random?count=${count}`,
-    sendData: () => '/buy/'
+    sendData: () => '/buy/',
+    getCategoryList: () => `/category-list`
 }
 
 export {

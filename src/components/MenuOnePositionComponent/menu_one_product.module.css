@@ -1,0 +1,21 @@
+.product_text{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.one_category{
+    font-size: 18px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.subcategories {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+}
+
+.visible {
+    height: auto;
+    transition: height 0.3s ease-in;
+}

@@ -6,7 +6,8 @@ const floversService = {
     getById: (id, same) => apiService.get(urls.positionById(id, same)),
     getCategory: () => apiService.get(urls.previousCatalog()),
     getSimilar: (count) => apiService.get(urls.randomPosition(count)),
-    sendData: (data) => apiService.post(urls.sendData(), data)
+    sendData: (data) => apiService.post(urls.sendData(), data),
+    getCategoryList: () => apiService.get(urls.getCategoryList())
 }
 
 export {floversService}

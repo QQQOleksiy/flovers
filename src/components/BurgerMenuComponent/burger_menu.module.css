@@ -75,7 +75,7 @@
 }
 .landing > div {
     width: 198px;
-    height: 34px;
+    /*height: 34px;*/
     flex-shrink: 0;
     margin-left: 66px;
     color: #1F1F1F;
@@ -123,6 +123,10 @@
     cursor: pointer;
     margin-right: 120px;
     margin-left: 10px;
+}
+
+.title{
+
 }
 
 @media (max-width: 1500px) {
