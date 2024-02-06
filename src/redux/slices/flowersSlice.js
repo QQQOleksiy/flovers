@@ -69,7 +69,7 @@ const sendData = createAsyncThunk(
     async (data_, thunkAPI) => {
         try {
             const {data} = await floversService.sendData(data_)
-            console.log(data);
+            return data
         }catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
         }
@@ -80,7 +80,6 @@ const getCategoryList = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const {data} = await floversService.getCategoryList()
-            console.log(data);
             return data
         }catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
