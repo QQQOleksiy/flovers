@@ -127,7 +127,7 @@ const BasketPageComponent = () => {
                         </div>
                     </div>
                     <div className={css.final_order_btn}>
-                        <div className={css.invoice_btn}>Расходная накладная</div>
+                        {/*<div className={css.invoice_btn}>Расходная накладная</div>*/}
                         <div className={css.to_home_btn} onClick={() => {setStep(0); navigate('/home')}}>Вернуться на Главную</div>
                     </div>
                 </>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import css from './footer.module.css'
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const FooterComponent = () => {
 
@@ -24,8 +24,10 @@ const FooterComponent = () => {
                         </div>
                         <div>
                             <div className={css.number_text}>Номер телефона</div>
-                            <div className={css.number}>Моб: позже</div>
-                            <div className={css.number}>WhatsApp: ПОЗЖЕ</div>
+                            <div className={css.number}>Моб: +7 963 568-11-11</div>
+                            <div className={css.number}>Instagram: 1florcentre</div>
+                            <Link className={css.number} to={'https://t.me/florcentre'}>Telegram</Link><div></div>
+                            <Link className={css.number} to={'https://chat.whatsapp.com/K4cTzTZU8MELWit01ehF1m'}>WhatsApp</Link>
                         </div>
                         <div>
                             <div className={css.number_text}>Адрес</div>
@@ -41,7 +43,7 @@ const FooterComponent = () => {
                 <div className={css.obrabotka_data} onClick={() => navigate('/terms')}>
                     Политика в отношении обработки персональных данных
                 </div>
-                <div className={css.text_popusk}>COPYRIGHT © 2022 SINOWRAP.RU Вся информация и материалы, размещенные на
+                <div className={css.text_popusk}>COPYRIGHT © 2022 1florcentre.ru Вся информация и материалы, размещенные на
                     данном веб-сайте защищены авторским правом
                 </div>
             </div>

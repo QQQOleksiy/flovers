@@ -79,7 +79,7 @@ const ProductBigCard = () => {
                     </div>
                     <div className={css.product_price}><span>Цена:</span> {opt_price} р</div>
                     <div className={css.product_card_info}>
-                        <div className={css.product_cart_btn} onClick={() => setOpen(!isOpen)}>Добавить в корзину</div>
+                        <div className={css.product_cart_btn} onClick={() => {setOpen(!isOpen); window.scrollTo({ top: 0, behavior: 'smooth' });}}>Добавить в корзину</div>
                     </div>
                 </div>
             </div>
