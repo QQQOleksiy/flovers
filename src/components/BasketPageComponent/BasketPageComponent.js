@@ -128,7 +128,7 @@ const BasketPageComponent = () => {
                     </div>
                     <div className={css.final_order_btn}>
                         <div className={css.tg_wa}>
-                            <Link className={css.invoice_btn} to={'https://t.me/florcentre'}>Telegram</Link><div></div>
+                            <Link className={css.invoice_btn} to={'https://t.me/Florcentre_bot'}>Telegram</Link><div></div>
                             <Link className={css.invoice_btn} to={'https://chat.whatsapp.com/K4cTzTZU8MELWit01ehF1m'}>WhatsApp</Link>
                             {/*<div className={css.invoice_btn}>TG</div>*/}
                             {/*<div className={css.invoice_btn}>W</div>*/}

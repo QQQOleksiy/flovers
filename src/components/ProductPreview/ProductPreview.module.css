@@ -63,6 +63,7 @@
 }
 h5{
     color: #3aec1f;
+    font-size: 20px;
 }
 
 @media (max-width: 1440px) {
@@ -129,5 +130,9 @@ h5{
         font-size: 12px;
         font-weight: 510;
         word-wrap: break-word
+    }
+    h5{
+        color: #3aec1f;
+        font-size: 12px;
     }
 }
