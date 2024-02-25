@@ -13,7 +13,7 @@ const ProductPreview = ({product}) => {
 
     const navigate = useNavigate();
 
-    const {id, name, colors, main_photo_path = [],discount_price} = product
+    const {id, name, colors, main_photo_path = [],opt_price} = product
 
     return (
         <div className={css.product_pre} onClick={() => navigate(`/item/${id}`)}>
@@ -27,7 +27,7 @@ const ProductPreview = ({product}) => {
                 </div>
            </div>
             <div className={css.hhh}>
-                <h4 className={css.product_pre_text}>{name}</h4><h5>{discount_price} Р</h5>
+                <h4 className={css.product_pre_text}>{name}</h4><h5>{opt_price} Р</h5>
             </div>
         </div>
     );
