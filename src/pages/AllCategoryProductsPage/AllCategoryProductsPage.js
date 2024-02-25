@@ -32,7 +32,11 @@ const CatalogPage = () => {
     useEffect(() =>{
         window.scrollTo({ top: 0, behavior: 'smooth' });
         dispatch(flowerAction.close_menu())
-    }, [dispatch])
+    }, [dispatch, page])
+
+    useEffect(() => {
+        setPage(1);
+    }, [product_type]);
 
     return (
         <div className={css.catalog_container}>

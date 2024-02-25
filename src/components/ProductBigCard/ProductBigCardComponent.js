@@ -23,7 +23,7 @@ const ProductBigCard = () => {
 
     const {one_product} = useSelector(state => state.flowerReducer)
 
-    const {name, description, length, width, brand, orign_country, weight, opt_price, colors, main_photo_path = []} = one_product || { colors: [] }
+    const {name, description, length, width, brand, orign_country, weight, opt_price, colors, main_photo_path = [], category} = one_product || { colors: [] }
 
     const [photo_id, setPhoto] = useState();
 
@@ -48,7 +48,7 @@ const ProductBigCard = () => {
                     </div>
                 </div>
                 <div className={css.product_card_text_template}>
-                    <span className={css.product_card_small_text}>Категории: “Осень 2023”, “Обёрточная бумага”</span>
+                    <span className={css.product_card_small_text}>Категории: {category}</span>
                     <h1 className={css.product_card_big_text}>{name}</h1>
                     <div className={css.product_color_select_container} >
                         <ColorSelect colors={colors || []} setPhoto={setPhoto} />

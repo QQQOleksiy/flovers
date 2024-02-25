@@ -34,7 +34,7 @@ const MenuOnePositionComponent = ({ category }) => {
                         key={index}
                         className={css.one_category}
                         onClick={() => {
-                            navigate(`/catalog/${value.subcategory_name}?page=1`);
+                            navigate(`/catalog/${value.subcategory_name}`);
                             dispatch(flowerAction.open_menu());
                         }}
                     >
