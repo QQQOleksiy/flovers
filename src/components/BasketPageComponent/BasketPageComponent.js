@@ -6,7 +6,7 @@ import {useForm} from 'react-hook-form'
 import css from './BasketPage.module.css'
 import {OneProductInBigCart} from "../index";
 import {flowerAction} from "../../redux";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const BasketPageComponent = () => {
     const [step, setStep] = useState(0);
@@ -127,7 +127,12 @@ const BasketPageComponent = () => {
                         </div>
                     </div>
                     <div className={css.final_order_btn}>
-                        {/*<div className={css.invoice_btn}>Расходная накладная</div>*/}
+                        <div className={css.tg_wa}>
+                            <Link className={css.invoice_btn} to={'https://t.me/florcentre'}>Telegram</Link><div></div>
+                            <Link className={css.invoice_btn} to={'https://chat.whatsapp.com/K4cTzTZU8MELWit01ehF1m'}>WhatsApp</Link>
+                            {/*<div className={css.invoice_btn}>TG</div>*/}
+                            {/*<div className={css.invoice_btn}>W</div>*/}
+                        </div>
                         <div className={css.to_home_btn} onClick={() => {setStep(0); navigate('/home')}}>Вернуться на Главную</div>
                     </div>
                 </>

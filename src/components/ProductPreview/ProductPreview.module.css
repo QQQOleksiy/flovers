@@ -57,6 +57,13 @@
     text-transform: capitalize;
     word-wrap: break-word
 }
+.hhh{
+    display: flex;
+    justify-content: space-between;
+}
+h5{
+    color: #3aec1f;
+}
 
 @media (max-width: 1440px) {
     .product_pre {

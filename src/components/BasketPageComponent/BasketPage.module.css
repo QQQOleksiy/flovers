@@ -221,6 +221,11 @@
     font-weight: 510;
     word-wrap: break-word;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.tg_wa{
+    display: flex;
 }
 
 .to_home_btn {

@@ -26,8 +26,8 @@ const FooterComponent = () => {
                             <div className={css.number_text}>Номер телефона</div>
                             <div className={css.number}>Моб: +7 963 568-11-11</div>
                             <div className={css.number}>Instagram: 1florcentre</div>
-                            <Link className={css.number} to={'https://t.me/florcentre'}>Telegram</Link><div></div>
-                            <Link className={css.number} to={'https://chat.whatsapp.com/K4cTzTZU8MELWit01ehF1m'}>WhatsApp</Link>
+                            <Link className={css.number} to={'https://t.me/Florcentre_bot'}>Telegram</Link><div></div>
+                            <Link className={css.number} to={'https://wa.me/79635681111'}>WhatsApp</Link>
                         </div>
                         <div>
                             <div className={css.number_text}>Адрес</div>
