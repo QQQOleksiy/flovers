@@ -1,12 +1,15 @@
-.product_text{
-    font-size: 22px;
+.product_text {
+    font-size: 64px;
     margin-bottom: 10px;
+    color: #1F1F1F;
+    cursor: pointer;
 }
 
-.one_category{
+.one_category {
     font-size: 18px;
     margin-left: 20px;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .subcategories {
@@ -18,4 +21,34 @@
 .visible {
     height: auto;
     transition: height 0.3s ease-in;
+}
+
+@media (max-width: 1240px) {
+    .product_text {
+        font-size: 56px;
+    }
+
+    .one_category {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 905px) {
+    .product_text {
+        font-size: 40px;
+    }
+
+    .one_category {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .product_text {
+        font-size: 24px;
+    }
+
+    .one_category {
+        font-size: 12px;
+    }
 }
