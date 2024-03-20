@@ -10,6 +10,7 @@ import CartPage from './pages/CartPage/CartPage';
 import DeliveryAndPaymentPage from "./pages/DeliveryAndPaymentPage/DeliveryAndPaymentPage";
 import ReturnAndExchangePage from "./pages/ReturnAndExchangePage/ReturnAndExchangePage";
 import TermsOfUsePage from "./pages/TermsOfUsePage/TermsOfUsePage";
+import PriceListPage from "./pages/PriceListPage/PriceListPage";
 
 function App() {
     useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
                     <Route path={`/delivery`} element={<DeliveryAndPaymentPage/>}/>
                     <Route path={`/return`} element={<ReturnAndExchangePage/>}/>
                     <Route path={`/terms`} element={<TermsOfUsePage/>}/>
+                    <Route path={`/price_list`} element={<PriceListPage/>}/>
                 </Route>
             </Routes>
         </div>

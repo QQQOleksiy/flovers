@@ -139,10 +139,7 @@
     .one_product_container{
         width: calc(100% - 60px);
         height: 55px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 20px;
-        padding-top: 10px;
+        padding: 10px 30px 20px;
         margin-top: 0px;
         margin-bottom: 0px;
     }

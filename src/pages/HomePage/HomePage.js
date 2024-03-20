@@ -72,7 +72,7 @@ const HomePage = () => {
                     <div className={css.button_catalog} onClick={() => navigate('/catalog')}>
                         <div>Перейти в Каталог</div>
                     </div>
-                    <div className={css.button_price_list} onClick={() => window.location.href = 'http://89.105.201.25/price_list.xlsx'}>
+                    <div className={css.button_price_list} onClick={() => navigate('/price_list')}>
                         <div>Прайс-лист</div>
                     </div>
                 </div>
