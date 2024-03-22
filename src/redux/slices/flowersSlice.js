@@ -98,22 +98,20 @@ const flowerSlice = createSlice({
             state.basket_open = !state.basket_open
         },
         add_product_in_basket: (state, action) => {
-            const productsToAdd = action.payload; // Отримуємо масив об'єктів з action.payload
+            const productsToAdd = action.payload;
 
-            // Перевіряємо кожен об'єкт в масиві productsToAdd
+
             productsToAdd.forEach(productToAdd => {
                 const { color_id, product_id, count, total, opt_price } = productToAdd;
 
-                // Перевіряємо, чи існує об'єкт з такими color_id і product_id в масиві
+
                 const productExists = state.products_in_basket.some(item => item.color_id === color_id && item.product_id === product_id);
 
                 if (productExists) {
-                    // Якщо об'єкт із такими color_id і product_id вже існує в масиві
-                    // Оновлюємо його властивості за потреби
+
                     state.products_in_basket = state.products_in_basket.map(item => {
                         if (item.color_id === color_id && item.product_id === product_id) {
-                            // Оновлюємо відповідні властивості з productToAdd, які потрібно оновити
-                            // Наприклад, count, total, opt_price і т. д.
+
                             return {
                                 ...item,
                                 count: count,
@@ -124,8 +122,7 @@ const flowerSlice = createSlice({
                         return item;
                     });
                 } else {
-                    // Якщо об'єкт із такими color_id і product_id не існує в масиві
-                    // Додаємо новий об'єкт до масиву
+
                     state.products_in_basket = [...state.products_in_basket, productToAdd];
                 }
             });
