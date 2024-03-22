@@ -22,6 +22,7 @@ const PriceListPage = () => {
 
     return (
         <div className={css.catalog_container}>
+            <h1>Прайс листы</h1>
             {
                 categoryList.map((value, id) => {
                     return (

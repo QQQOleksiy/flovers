@@ -29,7 +29,8 @@ const PriceOnePositionComponent = ({ category }) => {
                         key={index}
                         className={css.one_category}
                         onClick={() => {
-                            window.location.href = `http://89.105.201.25/${value.subcategory_name}.xlsx`;
+                            const subcategoryName = value.subcategory_name.replace(/[\s,]+/g, '_'); // Заміна пробілів та ком на підкреслення
+                            window.location.href = `http://89.105.201.25/${subcategoryName}.xlsx`;
                         }}
                     >
                         {value.subcategory_name}

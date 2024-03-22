@@ -1,31 +1,48 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import { useState } from 'react';
 
 import css from './CatalogProductCard.module.css'
+import {useNavigate} from "react-router-dom";
 
-import { ProductPreview, ProductBtnMore } from './../index'
 
 const CatalogProductCard = ({category}) => {
-    const [open, setOpen] = useState(false);
+    const [isSubcategoriesVisible, setSubcategoriesVisible] = useState(false);
+    const [subcategoriesHeight, setSubcategoriesHeight] = useState(0);
+    const subcategoriesRef = useRef(null);
 
-    const {name, data, type} = category // eslint-disable-next-line
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        setSubcategoriesHeight(isSubcategoriesVisible ? subcategoriesRef.current.scrollHeight : 0);
+    }, [isSubcategoriesVisible]);
+
+    const handleProductTextClick = () => {
+        setSubcategoriesVisible(!isSubcategoriesVisible);
+    };
 
     return (
-        <>
-            <div onClick={() => setOpen(!open)}>
-                <hr className={css.catalog_product_hr}/>
-                <h4 className={css.catalog_product_big_text}>{name}</h4>
+        <div>
+            <div className={css.product_text} onClick={handleProductTextClick}>
+                {category.super_category_name}
             </div>
-            <div className={css.catalog_product_open_panel} style={{maxHeight: open ? 1315 : 0 }}>
-                {/*<ScrollButtons/>*/}
-                <div className={css.catalog_product_container}>
-                    {
-                        data.map((value, id) => <ProductPreview product={value} key={id}/>)
-                    }
-                </div>
-                <ProductBtnMore type={type}/>
+            <div
+                className={css.subcategories}
+                ref={subcategoriesRef}
+                style={{ height: subcategoriesHeight }}
+            >
+                {category.subcategories.map((value, index) => (
+                    <div
+                        key={index}
+                        className={css.one_category}
+                        onClick={() => {
+                            navigate(`/catalog/${value.subcategory_name}`);
+                        }}
+                    >
+                        {value.subcategory_name}
+                    </div>
+                ))}
             </div>
-        </>
+        </div>
     );
 };
 
