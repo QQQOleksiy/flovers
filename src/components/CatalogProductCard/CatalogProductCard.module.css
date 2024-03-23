@@ -1,5 +1,5 @@
 .product_text {
-    font-size: 64px;
+    font-size: 50px;
     margin-bottom: 10px;
     color: #1F1F1F;
     cursor: pointer;
@@ -25,7 +25,7 @@
 
 @media (max-width: 1240px) {
     .product_text {
-        font-size: 56px;
+        font-size: 38px;
     }
 
     .one_category {
@@ -35,7 +35,7 @@
 
 @media (max-width: 905px) {
     .product_text {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .one_category {
@@ -45,7 +45,7 @@
 
 @media (max-width: 600px) {
     .product_text {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .one_category {
