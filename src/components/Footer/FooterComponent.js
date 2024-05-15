@@ -31,11 +31,11 @@ const FooterComponent = () => {
                         </div>
                         <div>
                             <div className={css.number_text}>Адрес</div>
-                            <div className={css.number}>Уссурийск, ул. Льва Толстого 25 ст 2</div>
+                            <div className={css.number}>Уссурийск, ул. Льва Толстого 19/1</div>
                         </div>
                         <div>
                             <div className={css.number_text}>Режим работы</div>
-                            <div className={css.number}>Пн-Сб: 10:00-19:00</div>
+                            <div className={css.number}>Пн-Сб: 10:00-18:00</div>
                             <div className={css.number}>Вс: Выходной</div>
                         </div>
                     </div>
